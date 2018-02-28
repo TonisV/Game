@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhisicObject : MonoBehaviour {
+public class PhisicObject : MonoBehaviour
+{
 
     public float minGroundNormalY = .65f;
     public float gravityModifier = 1f;
