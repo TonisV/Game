@@ -1,0 +1,46 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DroppingPlaftormsController : MonoBehaviour {
+
+	private Rigidbody2D body2d;
+	public bool usedrop = false;
+	public Transform rayStart;
+	public Transform rayEnd;
+	private bool playerSpotted = false;
+	public int randomNumber;
+	public int dropModifier = 1;
+
+	void Start () {
+		randomNumber = Random.Range(20, (30 * dropModifier));
+		body2d = GetComponent<Rigidbody2D>();
+	}
+	
+	void Update () {
+		Raycasting();
+		platformDropping();
+	}
+
+	// Drop platform when player is randomly spotted
+	public void platformDropping() {
+		if (usedrop)
+		{
+			if (playerSpotted)
+			{
+				randomNumber--;
+			}
+			if (randomNumber < 1)
+			{
+				body2d.bodyType = RigidbodyType2D.Dynamic;
+			}
+		}
+	}
+
+	// Cast ray in choosen position and check if it is collaiding with player
+	public void Raycasting() {
+		Debug.DrawLine(rayStart.position, rayEnd.position, Color.red);
+		playerSpotted = Physics2D.Linecast(rayStart.position, rayEnd.position, 1 << LayerMask.NameToLayer("Player"));
+	}
+	
+}

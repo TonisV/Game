@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535f8e525ff367c4ba67961e201a05ed, type: 3}
+  m_Name: RandomFloorTile
+  m_EditorClassIdentifier: 
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Transform:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  m_InstancedGameObject: {fileID: 0}
+  m_Flags: 1
+  m_ColliderType: 1
+  m_Sprites:
+  - {fileID: 21300000, guid: 53a424a5c84f15849b28eaf5a8d6fa0d, type: 3}
+  - {fileID: 21300000, guid: e18f574a5120e314fba59ac735d7a9f9, type: 3}
+  - {fileID: 21300000, guid: 0d920ae54b2a1124491e0ea330702e2d, type: 3}
+  - {fileID: 21300000, guid: 6c74221bb79111b41bc3fe19fd9bd460, type: 3}
+  - {fileID: 21300000, guid: 4867bfb5746a92540b77e84083a92c32, type: 3}
+  - {fileID: 21300000, guid: 26239b0469b08a74d98485c18ac9f40f, type: 3}
+  - {fileID: 21300000, guid: 622dec7fd582c8940babd9ba35d384e4, type: 3}
+  - {fileID: 21300000, guid: 4faaed3aa9be53e4aa5c285e6b21ac4f, type: 3}
+  - {fileID: 21300000, guid: 19e8a4a563548184cbfae7d33222d89e, type: 3}

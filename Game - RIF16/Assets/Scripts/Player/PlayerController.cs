@@ -10,6 +10,7 @@ public class PlayerController : PhisicObject {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+
     // Use this for initialization
     void Awake()
     {
@@ -54,5 +55,19 @@ public class PlayerController : PhisicObject {
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
         targetVelocity = move * maxSpeed;
+    }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        if (other.transform.tag == "MovingPlatform")
+        {
+            transform.parent = other.transform;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other) {
+        if (other.transform.tag == "MovingPlatform")
+        {
+            transform.parent = null;
+        }
     }
 }
