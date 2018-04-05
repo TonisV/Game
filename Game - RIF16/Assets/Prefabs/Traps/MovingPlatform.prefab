@@ -161,7 +161,6 @@ GameObject:
   - component: {fileID: 4747176337596978}
   - component: {fileID: 61897876127351778}
   - component: {fileID: 50832423713581872}
-  - component: {fileID: 114736956865275254}
   m_Layer: 10
   m_Name: Platform
   m_TagString: MovingPlatform
@@ -432,18 +431,7 @@ MonoBehaviour:
   pointSelection: 1
   rayStart: {fileID: 4649468718025576}
   rayEnd: {fileID: 4703752924636404}
-  moveWithPlayer: 0
---- !u!114 &114736956865275254
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1728619212168134}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  moveWithPlayer: 1
 --- !u!212 &212080821290845114
 SpriteRenderer:
   m_ObjectHideFlags: 1
