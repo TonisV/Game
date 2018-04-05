@@ -11,7 +11,8 @@ public class MovingPlatformController : MonoBehaviour {
 	public int pointSelection;
 	public Transform rayStart;
 	public Transform rayEnd;
-	public bool playerSpotted = false;
+	private bool playerSpotted = false;
+	public bool moveWithPlayer = false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,11 +22,24 @@ public class MovingPlatformController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Raycasting();
-		if (playerSpotted)
+		if (playerSpotted && moveWithPlayer)
 		{
-			platform.transform.position = Vector3.MoveTowards(platform.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
-		
-		
+			MovePlatform();
+		} else if(!moveWithPlayer) {
+			MovePlatform();
+		}
+	}
+
+	// Cast ray in choosen position and check if it is collaiding with player
+	public void Raycasting() {
+		Debug.DrawLine(rayStart.position, rayEnd.position, Color.red);
+		playerSpotted = Physics2D.Linecast(rayStart.position, rayEnd.position, 1 << LayerMask.NameToLayer("Player"));
+	}
+
+	public void MovePlatform() {
+
+		platform.transform.position = Vector3.MoveTowards(platform.transform.position, currentPoint.position, Time.deltaTime * moveSpeed);
+	
 		if (platform.transform.position == currentPoint.position)
 		{
 			pointSelection++;
@@ -35,13 +49,6 @@ public class MovingPlatformController : MonoBehaviour {
 			}
 
 			currentPoint = points[pointSelection];
-		}
-		}
-	}
-
-	// Cast ray in choosen position and check if it is collaiding with player
-	public void Raycasting() {
-		Debug.DrawLine(rayStart.position + currentPoint.position, rayEnd.position + currentPoint.position, Color.red);
-		playerSpotted = Physics2D.Linecast(rayStart.position, rayEnd.position, 1 << LayerMask.NameToLayer("Player"));
+		}	
 	}
 }
