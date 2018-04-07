@@ -13,6 +13,8 @@ public class PlayerController : PhisicObject {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    public bool onIce = false;
+
 
     // Use this for initialization
     void Awake()
@@ -59,13 +61,24 @@ public class PlayerController : PhisicObject {
         animator.SetBool("grounded", grounded);
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
-        targetVelocity = move * maxSpeed;
+        if(onIce){
+            // Apply input as a force instead of setting velocity directly.
+            targetVelocity = move * maxSpeed * 0.5f;
+        }else{
+            // Set Velocity Directly
+            targetVelocity = move * maxSpeed;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other) {
+        
         if (other.transform.tag == "MovingPlatform")
         {
             transform.parent = other.transform;
+        }
+        if (other.transform.tag == "Ice")
+        {
+           onIce = true; 
         }
     }
 
@@ -73,6 +86,10 @@ public class PlayerController : PhisicObject {
         if (other.transform.tag == "MovingPlatform")
         {
             transform.parent = null;
+        }
+        if (other.transform.tag == "Ice")
+        {
+           onIce = false; 
         }
     }
 
