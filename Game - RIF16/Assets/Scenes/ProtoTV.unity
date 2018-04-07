@@ -2828,6 +2828,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a618297f9afae7b4ca0509a4d7d73580, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &141373362 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114760278063892232, guid: 48347ef09881e3d4384ec18fdc0d147c,
+    type: 2}
+  m_PrefabInternal: {fileID: 815051888}
+  m_Script: {fileID: 11500000, guid: 2954ba99814d6ac4a9f5b7a0cfc91ad4, type: 3}
 --- !u!1 &151096051
 GameObject:
   m_ObjectHideFlags: 0
@@ -3576,6 +3582,12 @@ Transform:
   m_Father: {fileID: 1861305841}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &761296436 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114567443982349108, guid: 48347ef09881e3d4384ec18fdc0d147c,
+    type: 2}
+  m_PrefabInternal: {fileID: 815051888}
+  m_Script: {fileID: 11500000, guid: 2954ba99814d6ac4a9f5b7a0cfc91ad4, type: 3}
 --- !u!1001 &815051888
 Prefab:
   m_ObjectHideFlags: 0
@@ -3583,6 +3595,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114851876106185598, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224359674805640906, guid: 48347ef09881e3d4384ec18fdc0d147c,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -3837,6 +3854,56 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -539.8753
       objectReference: {fileID: 0}
+    - target: {fileID: 114851876106185598, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114851876106185598, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114851876106185598, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 141373362}
+    - target: {fileID: 114851876106185598, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 114851876106185598, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114672294578168032, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 761296436}
+    - target: {fileID: 114672294578168032, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 224290473367997534, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224290473367997534, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224290473367997534, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48347ef09881e3d4384ec18fdc0d147c, type: 2}
   m_IsPrefabParent: 0
@@ -3978,6 +4045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db33ffbfde5c8d4486d74c314dbb932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestinationSceneIndex: 2
 --- !u!70 &1026729512
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
