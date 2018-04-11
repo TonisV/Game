@@ -12,5 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/level1.unity
     guid: b8f4bb0f613d0a44a8cdea058ff0c676
   - enabled: 1
-    path: Assets/ProtoTV/Proto.unity
+    path: Assets/Scenes/ProtoTV.unity
     guid: dda3ad38b253dee4f90ecce026748c75
+  - enabled: 1
+    path: Assets/Scenes/ProtoTV2.unity
+    guid: e4d292aee302c874db8af2a7bc4ab078
