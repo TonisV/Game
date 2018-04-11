@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : PhisicObject {
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+    public static int curHealth;
+    public int maxHealth = 5;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -18,6 +21,8 @@ public class PlayerController : PhisicObject {
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        curHealth = maxHealth;
     }
 
     protected override void ComputeVelocity()
@@ -87,7 +92,13 @@ public class PlayerController : PhisicObject {
            onIce = false; 
         }
     }
-    
 
-
+    public void Die() {
+        curHealth--;
+        if (curHealth == 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        } else {
+            transform.position = new Vector2(-20, -4);
+        }
+    }
 }
