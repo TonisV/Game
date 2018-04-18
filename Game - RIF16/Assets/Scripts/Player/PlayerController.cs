@@ -63,7 +63,7 @@ public class PlayerController : PhisicObject {
 
         if(onIce){
             // Apply input as a force instead of setting velocity directly.
-            targetVelocity = move * maxSpeed * 0.5f;
+            targetVelocity = move * maxSpeed;
         }else{
             // Set Velocity Directly
             targetVelocity = move * maxSpeed;
