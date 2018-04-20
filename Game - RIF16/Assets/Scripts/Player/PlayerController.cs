@@ -95,10 +95,16 @@ public class PlayerController : PhisicObject {
 
     public void Die() {
         curHealth--;
-        if (curHealth == 0) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        int ActiveSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (ActiveSceneIndex > 1) {
+            if (curHealth == 0) {
+                SceneManager.LoadScene(ActiveSceneIndex - 1);
+            } else {
+                SceneManager.LoadScene(ActiveSceneIndex);
+            }
         } else {
-            transform.position = new Vector2(-20, -4);
+            SceneManager.LoadScene(ActiveSceneIndex);
         }
     }
 }
