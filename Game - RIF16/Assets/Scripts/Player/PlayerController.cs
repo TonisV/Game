@@ -10,6 +10,8 @@ public class PlayerController : PhisicObject {
     public static int curHealth;
     public int maxHealth = 5;
 
+    public Transform spawningPoint;
+
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
@@ -98,7 +100,7 @@ public class PlayerController : PhisicObject {
         if (curHealth == 0) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         } else {
-            transform.position = new Vector2(-20, -4);
+            transform.position = spawningPoint.position;
         }
     }
 }
