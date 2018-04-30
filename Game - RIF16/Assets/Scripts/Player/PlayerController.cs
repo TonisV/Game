@@ -10,6 +10,8 @@ public class PlayerController : PhisicObject {
     public static int curHealth;
     public int maxHealth = 5;
 
+    public Transform spawningPoint;
+
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
@@ -95,16 +97,10 @@ public class PlayerController : PhisicObject {
 
     public void Die() {
         curHealth--;
-        int ActiveSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        if (ActiveSceneIndex > 1) {
-            if (curHealth == 0) {
-                SceneManager.LoadScene(ActiveSceneIndex - 1);
-            } else {
-                SceneManager.LoadScene(ActiveSceneIndex);
-            }
+        if (curHealth == 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         } else {
-            SceneManager.LoadScene(ActiveSceneIndex);
+            transform.position = spawningPoint.position;
         }
     }
 }
