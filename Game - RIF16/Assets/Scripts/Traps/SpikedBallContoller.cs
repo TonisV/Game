@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpikedBallContoller : MonoBehaviour {
-
 	private Rigidbody2D body2d;
 	public float leftPushRange = -0.3f;
 	public float rightPushRange = 0.3f;

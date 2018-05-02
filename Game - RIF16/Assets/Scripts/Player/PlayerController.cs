@@ -73,6 +73,10 @@ public class PlayerController : PhisicObject {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
+        if (other.transform.tag == "Enemy")
+        {
+           Die();
+        }
         
         if (other.transform.tag == "MovingPlatform")
         {
