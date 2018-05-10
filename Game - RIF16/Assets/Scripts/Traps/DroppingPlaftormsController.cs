@@ -37,7 +37,7 @@ public class DroppingPlaftormsController : MonoBehaviour {
 		}
 	}
 
-	// Cast ray in choosen position and check if it is collaiding with player
+	// Cast ray in choosen position and check if it is colliding with player
 	public void Raycasting() {
 		Debug.DrawLine(rayStart.position, rayEnd.position, Color.red);
 		playerSpotted = Physics2D.Linecast(rayStart.position, rayEnd.position, 1 << LayerMask.NameToLayer("Player"));

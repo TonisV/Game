@@ -13,7 +13,6 @@ public class LoadSceneOnClick : MonoBehaviour {
 
     void Start() {
         savedSceneIndex = PlayerPrefs.GetInt("sceneIndex");
-        Debug.Log(savedSceneIndex);
         if(savedSceneIndex > 1 && continueButton != null && continueText != null) {
             continueButton.interactable = true;
             continueText.color = new Color(1f, 1f, 1f, 1f);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerController : PhisicObject {
 
@@ -9,6 +10,7 @@ public class PlayerController : PhisicObject {
     public float jumpTakeOffSpeed = 7;
     public static int curHealth;
     public int maxHealth = 5;
+    private DateTime lastRun;
 
     public Transform spawningPoint;
 
@@ -100,11 +102,26 @@ public class PlayerController : PhisicObject {
     }
 
     public void Die() {
-        curHealth--;
-        if (curHealth == 0) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        } else {
-            transform.position = spawningPoint.position;
+        if (lastRun.AddSeconds(2) < DateTime.Now) {
+
+            lastRun = DateTime.Now;
+
+            curHealth--;
+            int ActiveSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+            if (ActiveSceneIndex > 1) {
+                if (curHealth == 0) {
+                    SceneManager.LoadScene(ActiveSceneIndex - 1);
+                } else {
+                    transform.position = spawningPoint.position;
+                }
+            } else {
+                if (curHealth == 0) {
+                    SceneManager.LoadScene(ActiveSceneIndex);
+                } else {
+                    transform.position = spawningPoint.position;
+                }
+            }
         }
     }
 }

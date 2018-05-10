@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 233428252256295332}
   - component: {fileID: 114056148065449276}
   - component: {fileID: 255679282219576178}
+  - component: {fileID: 58402343272806048}
   m_Layer: 9
   m_Name: SpikedBall
   m_TagString: Enemy
@@ -606,6 +607,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58402343272806048
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928544714353392}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.011569142, y: -0.034709215}
+  serializedVersion: 2
+  m_Radius: 1.99
 --- !u!58 &58985968460202484
 CircleCollider2D:
   m_ObjectHideFlags: 1
