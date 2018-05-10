@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.6117647, g: 0.6117647, b: 0.6117647, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -533,7 +533,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 018cb56fb2e19bc4183aebb70285c3fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2942,6 +2942,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 108310115428224510, guid: 7a4681191a739424498d0592e1eb618b,
+        type: 2}
+      propertyPath: m_Range
+      value: 10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 108310115428224510, guid: 7a4681191a739424498d0592e1eb618b,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 2.53
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a4681191a739424498d0592e1eb618b, type: 2}
   m_IsPrefabParent: 0
@@ -3962,7 +3972,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 018cb56fb2e19bc4183aebb70285c3fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4173,7 +4183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db33ffbfde5c8d4486d74c314dbb932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestinationSceneIndex: 2
+  DestinationSceneIndex: 1
 --- !u!70 &1026729512
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4407,6 +4417,30 @@ Prefab:
     - target: {fileID: 4812324785494614, guid: 3faaa721fba55634c9f3f23bd12c0558, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108079005018600304, guid: 3faaa721fba55634c9f3f23bd12c0558,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108079005018600304, guid: 3faaa721fba55634c9f3f23bd12c0558,
+        type: 2}
+      propertyPath: m_SpotAngle
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 108079005018600304, guid: 3faaa721fba55634c9f3f23bd12c0558,
+        type: 2}
+      propertyPath: m_Range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 108079005018600304, guid: 3faaa721fba55634c9f3f23bd12c0558,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561540710793204, guid: 3faaa721fba55634c9f3f23bd12c0558, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3faaa721fba55634c9f3f23bd12c0558, type: 2}

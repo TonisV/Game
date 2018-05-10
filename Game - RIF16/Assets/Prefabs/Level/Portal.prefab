@@ -56,6 +56,8 @@ GameObject:
   - component: {fileID: 212135295724293212}
   - component: {fileID: 70595765849577902}
   - component: {fileID: 114445471422658592}
+  - component: {fileID: 70610493898275110}
+  - component: {fileID: 114955191740063448}
   m_Layer: 10
   m_Name: Portal
   m_TagString: Untagged
@@ -70,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1923459482876848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.64, y: -5.03, z: 10}
+  m_LocalPosition: {x: 35.14, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4623493229465608}
@@ -119,6 +121,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.73}
   m_Size: {x: 3.16, y: 4.42}
   m_Direction: 0
+--- !u!70 &70610493898275110
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1923459482876848}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.73}
+  m_Size: {x: 3.16, y: 4.42}
+  m_Direction: 0
 --- !u!108 &108310115428224510
 Light:
   m_ObjectHideFlags: 1
@@ -129,8 +146,8 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0, g: 0.7103448, b: 1, a: 1}
-  m_Intensity: 1.25
-  m_Range: 100
+  m_Intensity: 2.53
+  m_Range: 10.3
   m_SpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
@@ -181,6 +198,18 @@ MonoBehaviour:
   lightToFade: {fileID: 108310115428224510}
   eachFadeTime: 1.25
   fadeWaitTime: 0
+--- !u!114 &114955191740063448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1923459482876848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db33ffbfde5c8d4486d74c314dbb932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestinationSceneIndex: 0
 --- !u!198 &198877570106535304
 ParticleSystem:
   m_ObjectHideFlags: 1
