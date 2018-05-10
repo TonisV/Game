@@ -13,7 +13,7 @@ public class LoadSceneOnClick : MonoBehaviour {
 
     void Start() {
         savedSceneIndex = PlayerPrefs.GetInt("sceneIndex");
-        if(savedSceneIndex > 1 && continueButton != null && continueText != null) {
+        if(savedSceneIndex > 2 && continueButton != null && continueText != null) {
             continueButton.interactable = true;
             continueText.color = new Color(1f, 1f, 1f, 1f);
         }
@@ -28,7 +28,7 @@ public class LoadSceneOnClick : MonoBehaviour {
     }
 
     public void LoadFromSave() {
-        if (savedSceneIndex > 1) {
+        if (savedSceneIndex > 2) {
             Time.timeScale = 1;
             SceneManager.LoadScene(savedSceneIndex);
         }
