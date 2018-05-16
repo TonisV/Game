@@ -79,14 +79,13 @@ public class PlayerController : PhisicObject {
         {
            Die();
         }
-        
         if (other.transform.tag == "MovingPlatform")
         {
             transform.parent = other.transform;
         }
         if (other.transform.tag == "Ice")
         {
-           onIce = true; 
+           //onIce = true; 
         }
     }
 
@@ -97,7 +96,14 @@ public class PlayerController : PhisicObject {
         }
         if (other.transform.tag == "Ice")
         {
-           onIce = false; 
+           //onIce = false; 
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if (other.CompareTag("LevelBorder"))
+        {
+            Die();
         }
     }
 
