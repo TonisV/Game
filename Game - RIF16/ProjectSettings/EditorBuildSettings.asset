@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: eebf8acb0065b8a46981109a42ce900e
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: 0f8f2bd133041a044ba2b1efbb05969c
-  - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: dda3ad38b253dee4f90ecce026748c75
   - enabled: 0
     path: Assets/Scenes/Demos/Level1.unity
     guid: b8f4bb0f613d0a44a8cdea058ff0c676
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Demos/ProtoTV2.unity
     guid: e4d292aee302c874db8af2a7bc4ab078
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 0f8f2bd133041a044ba2b1efbb05969c

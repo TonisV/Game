@@ -27,6 +27,10 @@ public class LoadSceneOnClick : MonoBehaviour {
         SceneManager.LoadScene(sceneIndex);
     }
 
+    public void LoadByName(string sceneName) {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+    }
+
     public void LoadFromSave() {
         if (savedSceneIndex > 2) {
             Time.timeScale = 1;

@@ -10,10 +10,11 @@ public class DroppingPlaftormsController : MonoBehaviour {
 	public Transform rayEnd;
 	private bool playerSpotted = false;
 	public int randomNumber;
-	public int dropModifier = 1;
+	public int dropSpeedModifier = 1;
+	public int gravityModifier = 1;
 
 	void Start () {
-		randomNumber = Random.Range(20, (30 * dropModifier));
+		randomNumber = Random.Range(20, (30 * dropSpeedModifier));
 		body2d = GetComponent<Rigidbody2D>();
 	}
 	
@@ -33,6 +34,7 @@ public class DroppingPlaftormsController : MonoBehaviour {
 			if (randomNumber < 1)
 			{
 				body2d.bodyType = RigidbodyType2D.Dynamic;
+				body2d.gravityScale = gravityModifier;
 			}
 		}
 	}
