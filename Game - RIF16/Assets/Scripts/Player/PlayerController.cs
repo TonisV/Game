@@ -18,6 +18,7 @@ public class PlayerController : PhisicObject {
     private Animator animator;
 
     public bool onIce = false;
+    public bool enemyHit = false;
 
 
     // Use this for initialization
@@ -75,10 +76,6 @@ public class PlayerController : PhisicObject {
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-        if (other.transform.tag == "Enemy")
-        {
-           Die();
-        }
         if (other.transform.tag == "MovingPlatform")
         {
             transform.parent = other.transform;
@@ -97,6 +94,13 @@ public class PlayerController : PhisicObject {
         if (other.transform.tag == "Ice")
         {
            //onIce = false; 
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Enemy"))
+        {
+            Die();
         }
     }
 

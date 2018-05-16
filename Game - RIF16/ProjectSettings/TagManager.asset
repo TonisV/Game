@@ -8,6 +8,7 @@ TagManager:
   - MovingPlatform
   - Ice
   - Floor
+  - LevelBorder
   layers:
   - Default
   - TransparentFX
