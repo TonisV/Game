@@ -1736,7 +1736,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4650024078918282, guid: 4cf48d0cfb39b3041af0f95cac9d7b88, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 50872595241212816, guid: 4cf48d0cfb39b3041af0f95cac9d7b88,
         type: 2}
@@ -1776,7 +1776,7 @@ Prefab:
     - target: {fileID: 114546399032168406, guid: 4cf48d0cfb39b3041af0f95cac9d7b88,
         type: 2}
       propertyPath: gravityModifier
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cf48d0cfb39b3041af0f95cac9d7b88, type: 2}
@@ -1928,7 +1928,7 @@ Transform:
   - {fileID: 4744816}
   - {fileID: 1006574552}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &761296436 stripped
 MonoBehaviour:
@@ -2764,6 +2764,34 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224811110072066370, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
     type: 2}
   m_PrefabInternal: {fileID: 1414655493}
+--- !u!1 &1506798963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1506798964}
+  m_Layer: 0
+  m_Name: LevelBorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1506798964
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506798963}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1682047824
 Prefab:
   m_ObjectHideFlags: 0
@@ -3047,5 +3075,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
