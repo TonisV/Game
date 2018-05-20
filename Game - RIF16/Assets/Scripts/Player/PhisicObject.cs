@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PhisicObject : MonoBehaviour
 {
-
+     [Header("Moving")]
     public float minGroundNormalY = .65f;
     public float gravityModifier = 1f;
 

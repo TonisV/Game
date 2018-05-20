@@ -7,18 +7,25 @@ using System;
 public class PlayerController : PhisicObject {
 
     public float maxSpeed = 7;
-    public float jumpTakeOffSpeed = 7;
-    public static int curHealth;
-    public int maxHealth = 5;
-    private DateTime lastRun;
 
+    [Header("Jumping")]
+    public float jumpTakeOffSpeed = 7;
+
+    [Header("Health")]
+    public int maxHealth = 5;
+    public static int curHealth;
+    private DateTime lastRun;
     public Transform spawningPoint;
 
-    private SpriteRenderer spriteRenderer;
-    private Animator animator;
+    [Header("Effects")]
+    public AudioSource runAudioSource;
+    public AudioSource jumpAudioSource;
+    public AudioSource hurtAudioSource;
 
-    public bool onIce = false;
-    public bool enemyHit = false;
+    private SpriteRenderer spriteRenderer;
+    private CapsuleCollider2D playerCollider;
+    private Animator animator;
+    private bool playerFlipX = false;
 
 
     // Use this for initialization
@@ -49,30 +56,29 @@ public class PlayerController : PhisicObject {
         }
 
         if (move.x > 0.01f)
-        {
-            if (spriteRenderer.flipX == true)
+        {   
+            if (playerFlipX)
             {
-                spriteRenderer.flipX = false;
+                spriteRenderer.transform.Rotate(0, 180, 0,Space.Self);
+                playerFlipX = false;
             }
         }
+
         else if (move.x < -0.01f)
-        {
-            if (spriteRenderer.flipX == false)
+        {   
+            if (!playerFlipX)
             {
-                spriteRenderer.flipX = true;
+                spriteRenderer.transform.Rotate(0, 180, 0,Space.Self);
+                playerFlipX = true;
             }
         }
 
         animator.SetBool("grounded", grounded);
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
-        if(onIce){
-            // Apply input as a force instead of setting velocity directly.
-            targetVelocity = move * maxSpeed;
-        }else{
-            // Set Velocity Directly
-            targetVelocity = move * maxSpeed;
-        }
+        // Set Velocity Directly
+        targetVelocity = move * maxSpeed;
+        
     }
 
     void OnCollisionEnter2D(Collision2D other) {
@@ -80,20 +86,12 @@ public class PlayerController : PhisicObject {
         {
             transform.parent = other.transform;
         }
-        if (other.transform.tag == "Ice")
-        {
-           //onIce = true; 
-        }
     }
 
     void OnCollisionExit2D(Collision2D other) {
         if (other.transform.tag == "MovingPlatform")
         {
             transform.parent = null;
-        }
-        if (other.transform.tag == "Ice")
-        {
-           //onIce = false; 
         }
     }
 
