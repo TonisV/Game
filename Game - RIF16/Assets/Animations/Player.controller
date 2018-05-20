@@ -20,7 +20,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: hurt
+  - m_Name: playerHurt
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -173,7 +173,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: hurt
+    m_ConditionEvent: playerHurt
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102501033541037904}
@@ -197,7 +197,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: hurt
+    m_ConditionEvent: playerHurt
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102356164264757510}
@@ -288,10 +288,10 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 55aababf722b500488e7ed439cb4e882, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: velocityX
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_TimeParameter: velocityX
 --- !u!1102 &1102501033541037904
 AnimatorState:
   serializedVersion: 5

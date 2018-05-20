@@ -15,6 +15,7 @@ public class PlayerController : PhisicObject {
     public int maxHealth = 5;
     public static int curHealth;
     private DateTime lastRun;
+    public bool playerHurt;
     public Transform spawningPoint;
 
     [Header("Effects")]
@@ -28,7 +29,7 @@ public class PlayerController : PhisicObject {
     private bool playerFlipX = false;
 
 
-    // Use this for initialization
+    /* Initialization */
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -37,6 +38,8 @@ public class PlayerController : PhisicObject {
         curHealth = maxHealth;
     }
 
+
+    /* Player Movement */
     protected override void ComputeVelocity()
     {
         Vector2 move = Vector2.zero;
@@ -74,13 +77,33 @@ public class PlayerController : PhisicObject {
         }
 
         animator.SetBool("grounded", grounded);
+        animator.SetBool("playerHurt", playerHurt);
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
         // Set Velocity Directly
-        targetVelocity = move * maxSpeed;
-        
+        targetVelocity = move * maxSpeed; 
     }
 
+
+    /* Player Sounds */
+    public void playJumpSound()
+    {
+        jumpAudioSource.Play();
+    }
+
+    public void playRunSound()
+    {
+        runAudioSource.pitch = 1 + UnityEngine.Random.Range(-0.2f, 0.2f);
+        runAudioSource.Play();
+    }
+
+    public void playHurtSound()
+    {
+        hurtAudioSource.Play();
+    }
+
+
+    /* Player Collisions */
     void OnCollisionEnter2D(Collision2D other) {
         if (other.transform.tag == "MovingPlatform")
         {
@@ -98,23 +121,28 @@ public class PlayerController : PhisicObject {
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Enemy"))
         {
-            Die();
+            playerHurt = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.CompareTag("LevelBorder"))
         {
-            Die();
+            playerHurt = true;
         }
     }
 
     public void Die() {
+        
+        // Reset player animations
+        playerHurt = false;
+
         if (lastRun.AddSeconds(2) < DateTime.Now) {
 
             lastRun = DateTime.Now;
 
             curHealth--;
+            
             int ActiveSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
             if (ActiveSceneIndex > 1) {
