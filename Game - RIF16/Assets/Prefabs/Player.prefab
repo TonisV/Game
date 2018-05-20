@@ -606,11 +606,11 @@ MonoBehaviour:
   maxSpeed: 10
   jumpTakeOffSpeed: 20
   maxHealth: 5
+  playerHurt: 1
   spawningPoint: {fileID: 0}
   runAudioSource: {fileID: 82536922154975290}
   jumpAudioSource: {fileID: 82784300993081500}
   hurtAudioSource: {fileID: 82688369835796490}
-  playerFlipX: 0
 --- !u!212 &212046768104860500
 SpriteRenderer:
   m_ObjectHideFlags: 1
