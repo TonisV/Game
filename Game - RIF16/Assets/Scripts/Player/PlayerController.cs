@@ -35,7 +35,14 @@ public class PlayerController : PhisicObject {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
-        curHealth = maxHealth;
+        if (PlayerPrefs.HasKey("health")) {
+            curHealth = PlayerPrefs.GetInt("health");
+            if (curHealth == 0) {
+                curHealth = maxHealth;
+            }
+        } else {
+            curHealth = maxHealth;
+        }
     }
 
 
@@ -137,27 +144,28 @@ public class PlayerController : PhisicObject {
         // Reset player animations
         playerHurt = false;
 
-        if (lastRun.AddSeconds(2) < DateTime.Now) {
+        if (lastRun.AddSeconds(0.5) < DateTime.Now) {
 
             lastRun = DateTime.Now;
 
             curHealth--;
-            
+            PlayerPrefs.SetInt("health", curHealth);
+
             int ActiveSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
             if (ActiveSceneIndex > 1) {
                 if (curHealth == 0) {
-                    SceneManager.LoadScene(ActiveSceneIndex - 1);
+                    SceneManager.LoadSceneAsync(ActiveSceneIndex - 1);
                 } else {
-                    transform.position = spawningPoint.position;
+                    SceneManager.LoadSceneAsync(ActiveSceneIndex);
                 }
             } else {
-                if (curHealth == 0) {
-                    SceneManager.LoadScene(ActiveSceneIndex);
-                } else {
-                    transform.position = spawningPoint.position;
-                }
+                SceneManager.LoadSceneAsync(ActiveSceneIndex);
             }
         }
+    }
+
+    void OnApplicationQuit() {
+        PlayerPrefs.DeleteKey("health");
     }
 }

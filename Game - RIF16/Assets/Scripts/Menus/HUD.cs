@@ -20,7 +20,16 @@ public class HUD : MonoBehaviour {
         targetFillAmount = PlayerController.curHealth * 0.2f;
 
         if (healthHearts.fillAmount > targetFillAmount) {
+            if (healthHearts.fillAmount - targetFillAmount > 0.2f) {
+                healthHearts.fillAmount -= healthHearts.fillAmount - targetFillAmount;
+                healthHearts.fillAmount += 0.2f;
+            }
+
+            healthHearts.enabled = true;
+
             healthHearts.fillAmount -= 1.0f / waitTime * Time.deltaTime;
+        } else {
+            healthHearts.enabled = true;
         }
     }
 }
