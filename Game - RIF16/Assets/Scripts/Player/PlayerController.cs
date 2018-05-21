@@ -70,20 +70,12 @@ public class PlayerController : PhisicObject {
 
         if (move.x > 0.01f)
         {   
-            if (playerFlipX)
-            {
-                spriteRenderer.transform.Rotate(0, 180, 0,Space.Self);
-                playerFlipX = false;
-            }
+            spriteRenderer.flipX = false;
         }
 
         else if (move.x < -0.01f)
         {   
-            if (!playerFlipX)
-            {
-                spriteRenderer.transform.Rotate(0, 180, 0,Space.Self);
-                playerFlipX = true;
-            }
+            spriteRenderer.flipX = true;
         }
 
         animator.SetBool("jump", jump);

@@ -255,8 +255,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.613889, y: -0.44394326}
-  m_Size: {x: 1.3159094, y: 3.04462}
+  m_Offset: {x: 0.6413872, y: -0.44394326}
+  m_Size: {x: 1.095923, y: 3.04462}
   m_Direction: 0
 --- !u!82 &82536922154975290
 AudioSource:
@@ -268,7 +268,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243585296561747228, guid: 7b884ea2f79ed544ca99cbed3c42be4d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4b7115d869380e84ca2c26b538aac6f5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: eaee65efe41f2e04a91b25df3c20779b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -326,7 +326,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -407,7 +407,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -488,7 +488,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -606,7 +606,7 @@ MonoBehaviour:
   maxSpeed: 10
   jumpTakeOffSpeed: 20
   maxHealth: 5
-  playerHurt: 1
+  playerHurt: 0
   spawningPoint: {fileID: 0}
   runAudioSource: {fileID: 82536922154975290}
   jumpAudioSource: {fileID: 82784300993081500}
