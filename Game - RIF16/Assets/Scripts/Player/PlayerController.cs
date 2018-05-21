@@ -26,6 +26,7 @@ public class PlayerController : PhisicObject {
     private SpriteRenderer spriteRenderer;
     private CapsuleCollider2D playerCollider;
     private Animator animator;
+    private bool jump;
     private bool playerFlipX = false;
 
 
@@ -56,6 +57,7 @@ public class PlayerController : PhisicObject {
         if (Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = jumpTakeOffSpeed;
+            jump = true;
         }
         else if (Input.GetButtonUp("Jump"))
         {
@@ -63,6 +65,7 @@ public class PlayerController : PhisicObject {
             {
                 velocity.y = velocity.y * 0.5f;
             }
+            jump = false;
         }
 
         if (move.x > 0.01f)
@@ -83,6 +86,7 @@ public class PlayerController : PhisicObject {
             }
         }
 
+        animator.SetBool("jump", jump);
         animator.SetBool("grounded", grounded);
         animator.SetBool("playerHurt", playerHurt);
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
@@ -95,7 +99,11 @@ public class PlayerController : PhisicObject {
     /* Player Sounds */
     public void playJumpSound()
     {
-        jumpAudioSource.Play();
+        if (jump)
+        {
+            jumpAudioSource.Play();
+        }
+       
     }
 
     public void playRunSound()
