@@ -1346,6 +1346,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 815051888}
   m_Script: {fileID: 11500000, guid: 2954ba99814d6ac4a9f5b7a0cfc91ad4, type: 3}
+--- !u!4 &210559503 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4296036055824054, guid: 7a4681191a739424498d0592e1eb618b,
+    type: 2}
+  m_PrefabInternal: {fileID: 273999716}
 --- !u!1001 &273999716
 Prefab:
   m_ObjectHideFlags: 0
@@ -1384,6 +1389,30 @@ Prefab:
     - target: {fileID: 4296036055824054, guid: 7a4681191a739424498d0592e1eb618b, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114445471422658592, guid: 7a4681191a739424498d0592e1eb618b,
+        type: 2}
+      propertyPath: DestinationSceneIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198877570106535304, guid: 7a4681191a739424498d0592e1eb618b,
+        type: 2}
+      propertyPath: randomSeed
+      value: -2011099014
+      objectReference: {fileID: 0}
+    - target: {fileID: 114445471422658592, guid: 7a4681191a739424498d0592e1eb618b,
+        type: 2}
+      propertyPath: triggerLight
+      value: 
+      objectReference: {fileID: 1514985272}
+    - target: {fileID: 4623493229465608, guid: 7a4681191a739424498d0592e1eb618b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114445471422658592, guid: 7a4681191a739424498d0592e1eb618b,
+        type: 2}
+      propertyPath: triggerLight2
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a4681191a739424498d0592e1eb618b, type: 2}
@@ -2703,6 +2732,26 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -59.899902
       objectReference: {fileID: 0}
+    - target: {fileID: 224258902590565986, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224258902590565986, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224258902590565986, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 249.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224258902590565986, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7eff07be7cfb874bb7c34d7b8f326d2, type: 2}
   m_IsPrefabParent: 0
@@ -2769,6 +2818,71 @@ PolygonCollider2D:
       - {x: 49.96904, y: -14.492169}
       - {x: 49.930355, y: 9.919773}
       - {x: 19.938356, y: 10.115189}
+--- !u!1 &1514985271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1514985273}
+  - component: {fileID: 1514985272}
+  m_Layer: 10
+  m_Name: TriggerLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1514985272
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514985271}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0, g: 0.072, b: 1, a: 1}
+  m_Intensity: 10
+  m_Range: 0
+  m_SpotAngle: 179
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1514985273
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514985271}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.68, z: -11.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 210559503}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1682047824
 Prefab:
   m_ObjectHideFlags: 0
