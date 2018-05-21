@@ -27,7 +27,6 @@ public class PlayerController : PhisicObject {
     private CapsuleCollider2D playerCollider;
     private Animator animator;
     private bool jump;
-    private bool playerFlipX = false;
 
 
     /* Initialization */
@@ -110,7 +109,7 @@ public class PlayerController : PhisicObject {
     }
 
 
-    /* Player Collisions */
+    /* Player Collisions and Triggers*/
     void OnCollisionEnter2D(Collision2D other) {
         if (other.transform.tag == "MovingPlatform")
         {
@@ -141,9 +140,6 @@ public class PlayerController : PhisicObject {
 
     public void Die() {
         
-        // Reset player animations
-        playerHurt = false;
-
         if (lastRun.AddSeconds(0.5) < DateTime.Now) {
 
             lastRun = DateTime.Now;
