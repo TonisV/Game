@@ -7,21 +7,29 @@ using System;
 public class PlayerController : PhisicObject {
 
     public float maxSpeed = 7;
-    public float jumpTakeOffSpeed = 7;
-    public static int curHealth;
-    public int maxHealth = 5;
-    private DateTime lastRun;
 
+    [Header("Jumping")]
+    public float jumpTakeOffSpeed = 7;
+
+    [Header("Health")]
+    public int maxHealth = 5;
+    public static int curHealth;
+    private DateTime lastRun;
+    public bool playerHurt;
     public Transform spawningPoint;
 
+    [Header("Effects")]
+    public AudioSource runAudioSource;
+    public AudioSource jumpAudioSource;
+    public AudioSource hurtAudioSource;
+
     private SpriteRenderer spriteRenderer;
+    private CapsuleCollider2D playerCollider;
     private Animator animator;
-
-    public bool onIce = false;
-    public bool enemyHit = false;
+    private bool playerFlipX = false;
 
 
-    // Use this for initialization
+    /* Initialization */
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -37,6 +45,8 @@ public class PlayerController : PhisicObject {
         }
     }
 
+
+    /* Player Movement */
     protected override void ComputeVelocity()
     {
         Vector2 move = Vector2.zero;
@@ -56,40 +66,55 @@ public class PlayerController : PhisicObject {
         }
 
         if (move.x > 0.01f)
-        {
-            if (spriteRenderer.flipX == true)
+        {   
+            if (playerFlipX)
             {
-                spriteRenderer.flipX = false;
+                spriteRenderer.transform.Rotate(0, 180, 0,Space.Self);
+                playerFlipX = false;
             }
         }
+
         else if (move.x < -0.01f)
-        {
-            if (spriteRenderer.flipX == false)
+        {   
+            if (!playerFlipX)
             {
-                spriteRenderer.flipX = true;
+                spriteRenderer.transform.Rotate(0, 180, 0,Space.Self);
+                playerFlipX = true;
             }
         }
 
         animator.SetBool("grounded", grounded);
+        animator.SetBool("playerHurt", playerHurt);
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
-        if(onIce){
-            // Apply input as a force instead of setting velocity directly.
-            targetVelocity = move * maxSpeed;
-        }else{
-            // Set Velocity Directly
-            targetVelocity = move * maxSpeed;
-        }
+        // Set Velocity Directly
+        targetVelocity = move * maxSpeed; 
     }
 
+
+    /* Player Sounds */
+    public void playJumpSound()
+    {
+        jumpAudioSource.Play();
+    }
+
+    public void playRunSound()
+    {
+        runAudioSource.pitch = 1 + UnityEngine.Random.Range(-0.2f, 0.2f);
+        runAudioSource.Play();
+    }
+
+    public void playHurtSound()
+    {
+        hurtAudioSource.Play();
+    }
+
+
+    /* Player Collisions */
     void OnCollisionEnter2D(Collision2D other) {
         if (other.transform.tag == "MovingPlatform")
         {
             transform.parent = other.transform;
-        }
-        if (other.transform.tag == "Ice")
-        {
-           //onIce = true; 
         }
     }
 
@@ -98,27 +123,27 @@ public class PlayerController : PhisicObject {
         {
             transform.parent = null;
         }
-        if (other.transform.tag == "Ice")
-        {
-           //onIce = false; 
-        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Enemy"))
         {
-            Die();
+            playerHurt = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.CompareTag("LevelBorder"))
         {
-            Die();
+            playerHurt = true;
         }
     }
 
     public void Die() {
+        
+        // Reset player animations
+        playerHurt = false;
+
         if (lastRun.AddSeconds(0.5) < DateTime.Now) {
 
             lastRun = DateTime.Now;
