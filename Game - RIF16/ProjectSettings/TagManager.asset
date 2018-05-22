@@ -9,6 +9,7 @@ TagManager:
   - Ice
   - Floor
   - LevelBorder
+  - Portal
   layers:
   - Default
   - TransparentFX
