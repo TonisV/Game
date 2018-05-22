@@ -71,13 +71,11 @@ public class PlayerController : PhisicObject {
         {   
             spriteRenderer.flipX = false;
         }
-
         else if (move.x < -0.01f)
         {   
             spriteRenderer.flipX = true;
         }
 
-        animator.SetBool("jump", jump);
         animator.SetBool("grounded", grounded);
         animator.SetBool("playerHurt", playerHurt);
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
@@ -94,7 +92,6 @@ public class PlayerController : PhisicObject {
         {
             jumpAudioSource.Play();
         }
-       
     }
 
     public void playRunSound()
