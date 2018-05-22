@@ -6,6 +6,7 @@ public class DroppingPlaftormsController : MonoBehaviour {
 
 	private Rigidbody2D body2d;
 	public bool usedrop = false;
+	public bool instantDrop;
 	public Transform rayStart;
 	public Transform rayEnd;
 	private bool playerSpotted = false;
@@ -27,6 +28,10 @@ public class DroppingPlaftormsController : MonoBehaviour {
 	public void platformDropping() {
 		if (usedrop)
 		{
+			if (instantDrop && playerSpotted)
+			{
+				randomNumber = 0;
+			}
 			if (playerSpotted)
 			{
 				randomNumber--;
