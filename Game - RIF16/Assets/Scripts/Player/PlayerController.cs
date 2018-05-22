@@ -51,14 +51,14 @@ public class PlayerController : PhisicObject {
     {
         Vector2 move = Vector2.zero;
 
-        move.x = Input.GetAxisRaw("Horizontal");
+        move.x = !playerHurt ? Input.GetAxisRaw("Horizontal") : 0;
 
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump") && grounded && !playerHurt)
         {
             velocity.y = jumpTakeOffSpeed;
             jump = true;
         }
-        else if (Input.GetButtonUp("Jump"))
+        else if (Input.GetButtonUp("Jump") && !playerHurt)
         {
             if (velocity.y > 0)
             {
