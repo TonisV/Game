@@ -12,7 +12,6 @@ public class HUD : MonoBehaviour {
     // Use this for initialization
     void Start () {
         healthHearts = GameObject.Find("HealthHearts").GetComponent<Image>();
-
     }
 	
 	// Update is called once per frame
