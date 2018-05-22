@@ -1508,6 +1508,11 @@ Prefab:
       propertyPath: m_TagString
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 114445471422658592, guid: 7a4681191a739424498d0592e1eb618b,
+        type: 2}
+      propertyPath: DestinationSceneIndex
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a4681191a739424498d0592e1eb618b, type: 2}
   m_IsPrefabParent: 0
