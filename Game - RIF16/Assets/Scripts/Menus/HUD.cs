@@ -9,9 +9,17 @@ public class HUD : MonoBehaviour {
     private float waitTime = 5.0f;
     private float targetFillAmount;
 
+    public GameObject NextLevelUI;
+
+
     // Use this for initialization
     void Start () {
         healthHearts = GameObject.Find("HealthHearts").GetComponent<Image>();
+
+        if (!PlayerPrefs.HasKey("health") || PlayerPrefs.GetInt("health") == 5) {
+            NextLevelUI.SetActive(value: true);
+            Time.timeScale = 0;
+        }
     }
 	
 	// Update is called once per frame

@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 public class PauseGame : MonoBehaviour {
     public Transform canvas;
 
-    private void Start() {
-        Time.timeScale = 0;
-    }
-
     // Update is called once per frame
     void Update () {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
