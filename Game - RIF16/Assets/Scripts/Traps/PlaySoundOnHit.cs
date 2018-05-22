@@ -6,12 +6,18 @@ public class PlaySoundOnHit : MonoBehaviour {
 
 	public AudioSource hitAudioSource;
 	private bool soundPlayed = false;
+	public bool playSoundWhenHittingPlayer;
 
 	void OnTriggerEnter2D(Collider2D other)
     {	
 		if (!soundPlayed)
 		{
-			if (other.CompareTag("Player") || other.CompareTag("Floor") || other.CompareTag("Enemy") )
+			if (playSoundWhenHittingPlayer && other.CompareTag("Player"))
+			{
+				hitAudioSource.Play();
+				soundPlayed = true;	
+			}
+			else if (other.CompareTag("Player") || other.CompareTag("Floor") || other.CompareTag("Enemy") )
 			{
 				hitAudioSource.Play();
 				soundPlayed = true;	
