@@ -148,6 +148,8 @@ public class PlayerController : PhisicObject {
 
             if (ActiveSceneIndex > 1) {
                 if (curHealth == 0) {
+                    PlayerPrefs.SetInt("Downgraded", 1);
+                    PlayerPrefs.SetInt("sceneIndex", ActiveSceneIndex - 1);
                     SceneManager.LoadSceneAsync(ActiveSceneIndex - 1);
                 } else {
                     SceneManager.LoadSceneAsync(ActiveSceneIndex);
