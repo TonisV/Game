@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class PauseGame : MonoBehaviour {
     public Transform canvas;
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
             Pause();
         }
-	}
+}
 
     public void Pause() {
         GameObject FirstChild = canvas.gameObject.transform.GetChild(0).gameObject;
@@ -37,6 +37,10 @@ public class PauseGame : MonoBehaviour {
 
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+    }
+
+    public void Unpause() {
         Time.timeScale = 1;
     }
 }

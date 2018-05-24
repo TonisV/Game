@@ -9,14 +9,35 @@ public class HUD : MonoBehaviour {
     private float waitTime = 5.0f;
     private float targetFillAmount;
 
+    public GameObject NextLevelUI;
+
+
     // Use this for initialization
     void Start () {
         healthHearts = GameObject.Find("HealthHearts").GetComponent<Image>();
 
+        if (PlayerPrefs.HasKey("Downgraded") && PlayerPrefs.GetInt("Downgraded") == 1) {
+            NextLevelUI.GetComponent<Image>().color = new Color32(143,22,26,176);
+            NextLevelUI.SetActive(value: true);
+            Time.timeScale = 0;
+
+            PlayerPrefs.SetInt("Downgraded", 0);
+        } else if (PlayerPrefs.HasKey("LevelUp") && PlayerPrefs.GetInt("LevelUp") == 1) {
+            NextLevelUI.GetComponent<Image>().color = new Color32(125, 240, 8, 176);
+            NextLevelUI.SetActive(value: true);
+            Time.timeScale = 0;
+
+            PlayerPrefs.SetInt("LevelUp", 0);
+        }
+
+        if (!PlayerPrefs.HasKey("health") || PlayerPrefs.GetInt("health") == 5) {
+            NextLevelUI.SetActive(value: true);
+            Time.timeScale = 0;
+        }
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         targetFillAmount = PlayerController.curHealth * 0.2f;
 
         if (healthHearts.fillAmount > targetFillAmount) {

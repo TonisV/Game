@@ -18,6 +18,7 @@ public class PortalTeleport : MonoBehaviour {
             } else {
                 SceneManager.LoadScene(DestinationSceneIndex);
                 PlayerPrefs.SetInt("sceneIndex", DestinationSceneIndex);
+                PlayerPrefs.SetInt("LevelUp", 1);
                 PlayerPrefs.DeleteKey("health");
             }
         }
