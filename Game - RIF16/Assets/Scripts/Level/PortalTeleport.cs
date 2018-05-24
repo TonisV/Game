@@ -8,16 +8,8 @@ public class PortalTeleport : MonoBehaviour {
     public int DestinationSceneIndex;
     public Light triggerLight;
 
-    private PlayerController playerController;
-    private GameObject player;
     private int activeSceneIndex;
     private bool portalTriggered;
-
-    // Use this for initialization
-    void Start () {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerController = player.GetComponent<PlayerController>();
-    }
 
     private void Update() {
         if (portalTriggered) {

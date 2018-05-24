@@ -36,8 +36,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4093789766584110}
   - component: {fileID: 61102785183526238}
+  - component: {fileID: 82429261885604376}
+  - component: {fileID: 114618294937632260}
   m_Layer: 0
-  m_Name: HurtCol
+  m_Name: HurtTrigger
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,7 +264,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1687874328079476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.753, y: 4.226, z: 0}
+  m_LocalPosition: {x: 0.25, y: 4.226, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4756907341145800}
@@ -399,10 +401,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.7561412, y: 1.800107}
+  m_Offset: {x: 0.74409294, y: 1.6677969}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -413,7 +415,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5819988, y: 0.10511589}
+  m_Size: {x: 3.3892255, y: 0.10467291}
   m_EdgeRadius: 0
 --- !u!61 &61280137688674296
 BoxCollider2D:
@@ -440,6 +442,87 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.004965, y: 2.0029726}
   m_EdgeRadius: 0
+--- !u!82 &82429261885604376
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278836702934602}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243585296561747228, guid: 7b884ea2f79ed544ca99cbed3c42be4d,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: b997d1c59700dcb46bcb989b525ee2c1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114546399032168406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -452,11 +535,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usedrop: 1
+  instantDrop: 0
   rayStart: {fileID: 4751171757158494}
   rayEnd: {fileID: 4430133617903868}
   randomNumber: 0
   dropSpeedModifier: 1
   gravityModifier: 3
+--- !u!114 &114618294937632260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278836702934602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f86d783ebddbf4287b54097fdb71f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAudioSource: {fileID: 82429261885604376}
+  playSoundWhenHittingPlayer: 0
 --- !u!212 &212174092613969134
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -13,6 +13,7 @@ public class LaserController : MonoBehaviour {
 	public int laserTimerModifier = 3;
 	private bool playerSpotted = false;
     public GameObject laserLight;
+	public AudioSource laserSound;
 
 	void Start () {
 		playerController = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -20,7 +21,6 @@ public class LaserController : MonoBehaviour {
 		laserLine.widthCurve = AnimationCurve.Linear(0, .5f, 1, .5f);
 		laserParticles = gameObject.GetComponentInChildren<ParticleSystem>();
 		laserTimer = Random.Range(1, laserTimerModifier);
-        //laserLight = GameObject.transform.Find("Laser_Lighting");
 	}
 	
 	void Update () {
@@ -38,9 +38,11 @@ public class LaserController : MonoBehaviour {
 		{
 			laserTimer = Random.Range(1, laserTimerModifier);
 			laserActive = false;
+			laserSound.Stop();
 		} else if (laserTimer <= 0 && !laserActive) {
 			laserTimer = Random.Range(1, laserTimerModifier);
 			laserActive = true;
+			laserSound.Play();
 		}
 
 		LaserToggle();
@@ -65,7 +67,7 @@ public class LaserController : MonoBehaviour {
 
 		if (laserActive && playerSpotted)
 		{
-			playerController.Die();
+			playerController.playerHurt = true;
 		}
 	}
 
