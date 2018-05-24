@@ -278,7 +278,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0, g: 0.7103448, b: 1, a: 1}
-  m_Intensity: 2.53
+  m_Intensity: 5.2701616
   m_Range: 10.3
   m_SpotAngle: 50
   m_CookieSize: 10
@@ -404,7 +404,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2079774120
+  randomSeed: 578897303
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1343,7 +1343,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -1351,8 +1351,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 0, g: 0.69411755, b: 1, a: 1}
+        key1: {r: 0, g: 0.4491349, b: 0.64705884, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
