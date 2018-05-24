@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - LevelBorder
   - Portal
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Background
   - 
   - 
   - 
@@ -47,14 +48,14 @@ TagManager:
   - name: Background
     uniqueID: 3976573135
     locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Floor
     uniqueID: 1090329085
     locked: 0
   - name: Enemy
     uniqueID: 2832807123
-    locked: 0
-  - name: Default
-    uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 2796002949
