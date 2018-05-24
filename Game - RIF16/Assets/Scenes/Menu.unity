@@ -928,12 +928,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 544376176}
-        m_MethodName: LoadByName
-        m_Mode: 5
+        m_MethodName: LoadByIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: Credits
           m_BoolArgument: 1
@@ -2404,7 +2404,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243184813686622974, guid: 7b884ea2f79ed544ca99cbed3c42be4d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2c9336a9bf512914bbaab34471eddf6c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 49173a7b27ce2664e924273b5f99d464, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2462,7 +2462,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
