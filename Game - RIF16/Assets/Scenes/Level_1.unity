@@ -1738,6 +1738,7 @@ GameObject:
   - component: {fileID: 379907616}
   - component: {fileID: 379907615}
   - component: {fileID: 379907619}
+  - component: {fileID: 379907620}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1802,7 +1803,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 379907614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1959772, y: -0.028824568, z: -8.4375}
+  m_LocalPosition: {x: -2.7, y: -0.03262973, z: -8.4375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1838,6 +1839,22 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamEvent, Assembly-CSharp-firstpass,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &379907620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379907614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb4d9bd051a71f48a18edd27bce7c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.424
+  intensity: 0.61
+  blurSize: 0.5
+  blurIterations: 4
+  fastBloomMaterial: {fileID: 2100000, guid: 221340b8b5ad10940ba1646f87e3770c, type: 2}
 --- !u!1 &433109060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,6 +2110,11 @@ Prefab:
         type: 2}
       propertyPath: dropSpeedModifier
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114546399032168406, guid: 4cf48d0cfb39b3041af0f95cac9d7b88,
+        type: 2}
+      propertyPath: instantDrop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cf48d0cfb39b3041af0f95cac9d7b88, type: 2}
@@ -3208,7 +3230,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4673287286395064, guid: fae2a42a0b4b54342b03a89b7ee84397, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: 4673287286395064, guid: fae2a42a0b4b54342b03a89b7ee84397, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3288,7 +3310,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4812324785494614, guid: 3faaa721fba55634c9f3f23bd12c0558, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: 4812324785494614, guid: 3faaa721fba55634c9f3f23bd12c0558, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3348,6 +3370,21 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: eaee65efe41f2e04a91b25df3c20779b, type: 3}
+    - target: {fileID: 108446739926526174, guid: 3faaa721fba55634c9f3f23bd12c0558,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108079005018600304, guid: 3faaa721fba55634c9f3f23bd12c0558,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108446739926526174, guid: 3faaa721fba55634c9f3f23bd12c0558,
+        type: 2}
+      propertyPath: m_Range
+      value: 0.54
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3faaa721fba55634c9f3f23bd12c0558, type: 2}
   m_IsPrefabParent: 0
