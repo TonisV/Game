@@ -8,7 +8,11 @@ public class PauseGame : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (canvas == null) {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             Pause();
         }
 }
