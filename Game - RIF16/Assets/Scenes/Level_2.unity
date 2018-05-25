@@ -1456,6 +1456,11 @@ Prefab:
       propertyPath: instantDrop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82592808773683212, guid: 75d0ef754dc9f6342bc1913c9ee08dc1,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cec811024200d3846a6399078d0a6020, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75d0ef754dc9f6342bc1913c9ee08dc1, type: 2}
   m_IsPrefabParent: 0
@@ -1565,7 +1570,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243184813686622974, guid: 7b884ea2f79ed544ca99cbed3c42be4d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 502614e539bc37d48894abf3908c5c27, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d9935f917958a904ca2a7a64607f0bf5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1623,7 +1628,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1722,6 +1727,11 @@ Prefab:
       propertyPath: instantDrop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 82429261885604376, guid: 4cf48d0cfb39b3041af0f95cac9d7b88,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cec811024200d3846a6399078d0a6020, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cf48d0cfb39b3041af0f95cac9d7b88, type: 2}
   m_IsPrefabParent: 0
@@ -1920,7 +1930,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3000,6 +3010,11 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 4.65
       objectReference: {fileID: 0}
+    - target: {fileID: 82429261885604376, guid: 4cf48d0cfb39b3041af0f95cac9d7b88,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cec811024200d3846a6399078d0a6020, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cf48d0cfb39b3041af0f95cac9d7b88, type: 2}
   m_IsPrefabParent: 0
@@ -3286,7 +3301,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: eaee65efe41f2e04a91b25df3c20779b, type: 3}
+      objectReference: {fileID: 8300000, guid: 24f05ece31fc0c74f894b0dc2e81b895, type: 3}
     - target: {fileID: 108446739926526174, guid: 3faaa721fba55634c9f3f23bd12c0558,
         type: 2}
       propertyPath: m_Range
