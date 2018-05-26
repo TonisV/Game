@@ -34,6 +34,7 @@ public class PlayerController : PhisicObject {
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        playerCollider = GetComponent<CapsuleCollider2D>();
 
         if (PlayerPrefs.HasKey("health")) {
             curHealth = PlayerPrefs.GetInt("health");
@@ -124,6 +125,7 @@ public class PlayerController : PhisicObject {
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Enemy"))
         {
+            playerCollider.enabled = false;
             playerHurt = true;
         }
     }
@@ -136,7 +138,6 @@ public class PlayerController : PhisicObject {
     }
 
     public void Die() {
-        
         if (lastRun.AddSeconds(0.5) < DateTime.Now) {
 
             lastRun = DateTime.Now;
