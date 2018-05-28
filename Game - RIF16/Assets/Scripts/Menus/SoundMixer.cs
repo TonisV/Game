@@ -13,6 +13,7 @@ public class SoundMixer : MonoBehaviour {
 	public Slider sfxVolumeSlider;
 
 	void Start() {
+
 		float masterVol = PlayerPrefs.GetFloat("MasterVol", 0f);
 		float musicVol = PlayerPrefs.GetFloat("MusicVol", 0f);
 		float sfxVol = PlayerPrefs.GetFloat("SFXVol", 0f);
@@ -20,10 +21,6 @@ public class SoundMixer : MonoBehaviour {
 		masterVolumeSlider.value = masterVol;
 		musicVolumeSlider.value = musicVol;
 		sfxVolumeSlider.value = sfxVol;
-
-		SetMasterLvl(masterVol);
-		SetMasterLvl(musicVol);
-		SetMasterLvl(sfxVol);
 	}
 
 
