@@ -49,11 +49,11 @@ namespace Kino
                 _rangeY = 1;
             }
 
-            _threshold = bloom.ThresholdLinear;
-            _knee = bloom.SoftKnee * _threshold + 1e-5f;
+            _threshold = bloom.thresholdLinear;
+            _knee = bloom.softKnee * _threshold + 1e-5f;
 
             // Intensity is capped to prevent sampling errors.
-            _intensity = Mathf.Min(bloom.Intensity, 10);
+            _intensity = Mathf.Min(bloom.intensity, 10);
         }
 
         // Draw the graph at the current position.

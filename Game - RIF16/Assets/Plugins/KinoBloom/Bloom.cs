@@ -34,15 +34,15 @@ namespace Kino
 
         /// Prefilter threshold (gamma-encoded)
         /// Filters out pixels under this level of brightness.
-        public float ThresholdGamma {
+        public float thresholdGamma {
             get { return Mathf.Max(_threshold, 0); }
             set { _threshold = value; }
         }
 
         /// Prefilter threshold (linearly-encoded)
         /// Filters out pixels under this level of brightness.
-        public float ThresholdLinear {
-            get { return GammaToLinear(ThresholdGamma); }
+        public float thresholdLinear {
+            get { return GammaToLinear(thresholdGamma); }
             set { _threshold = LinearToGamma(value); }
         }
 
@@ -52,7 +52,7 @@ namespace Kino
 
         /// Soft-knee coefficient
         /// Makes transition between under/over-threshold gradual.
-        public float SoftKnee {
+        public float softKnee {
             get { return _softKnee; }
             set { _softKnee = value; }
         }
@@ -64,7 +64,7 @@ namespace Kino
         /// Bloom radius
         /// Changes extent of veiling effects in a screen
         /// resolution-independent fashion.
-        public float Radius {
+        public float radius {
             get { return _radius; }
             set { _radius = value; }
         }
@@ -76,7 +76,7 @@ namespace Kino
 
         /// Bloom intensity
         /// Blend factor of the result image.
-        public float Intensity {
+        public float intensity {
             get { return Mathf.Max(_intensity, 0); }
             set { _intensity = value; }
         }
@@ -87,7 +87,7 @@ namespace Kino
 
         /// High quality mode
         /// Controls filter quality and buffer resolution.
-        public bool HighQuality {
+        public bool highQuality {
             get { return _highQuality; }
             set { _highQuality = value; }
         }
@@ -102,7 +102,7 @@ namespace Kino
         [Tooltip("Reduces flashing noise with an additional filter.")]
         bool _antiFlicker = true;
 
-        public bool AntiFlicker {
+        public bool antiFlicker {
             get { return _antiFlicker; }
             set { _antiFlicker = value; }
         }
@@ -112,7 +112,7 @@ namespace Kino
         #region Private Members
 
         [SerializeField, HideInInspector]
-        Shader _shader = null;
+        Shader _shader;
 
         Material _material;
 
@@ -185,7 +185,7 @@ namespace Kino
             var iterations = Mathf.Clamp(logh_i, 1, kMaxIterations);
 
             // update the shader properties
-            var lthresh = ThresholdLinear;
+            var lthresh = thresholdLinear;
             _material.SetFloat("_Threshold", lthresh);
 
             var knee = lthresh * _softKnee + 1e-5f;
@@ -196,7 +196,7 @@ namespace Kino
             _material.SetFloat("_PrefilterOffs", pfo ? -0.5f : 0.0f);
 
             _material.SetFloat("_SampleScale", 0.5f + logh - logh_i);
-            _material.SetFloat("_Intensity", Intensity);
+            _material.SetFloat("_Intensity", intensity);
 
             // prefilter pass
             var prefiltered = RenderTexture.GetTemporary(tw, th, 0, rtFormat);
