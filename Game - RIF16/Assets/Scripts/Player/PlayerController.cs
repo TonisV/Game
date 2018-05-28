@@ -26,6 +26,7 @@ public class PlayerController : PhisicObject {
     private SpriteRenderer spriteRenderer;
     private CapsuleCollider2D playerCollider;
     private Animator animator;
+    private bool canMove = true;
     private bool jump;
 
 
@@ -50,16 +51,21 @@ public class PlayerController : PhisicObject {
     /* Player Movement */
     protected override void ComputeVelocity()
     {
+        if (playerHurt)
+        {
+            canMove = false;
+        }
+
         Vector2 move = Vector2.zero;
 
-        move.x = !playerHurt ? Input.GetAxisRaw("Horizontal") : 0;
+        move.x = canMove ? Input.GetAxisRaw("Horizontal") : 0;
 
-        if (Input.GetButtonDown("Jump") && grounded && !playerHurt)
+        if (Input.GetButtonDown("Jump") && grounded && canMove)
         {
             velocity.y = jumpTakeOffSpeed;
             jump = true;
         }
-        else if (Input.GetButtonUp("Jump") && !playerHurt)
+        else if (Input.GetButtonUp("Jump") && canMove)
         {
             if (velocity.y > 0)
             {
@@ -82,7 +88,7 @@ public class PlayerController : PhisicObject {
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
         // Set Velocity Directly
-        targetVelocity = move * maxSpeed; 
+        targetVelocity = move * maxSpeed;
     }
 
 
@@ -106,7 +112,6 @@ public class PlayerController : PhisicObject {
         hurtAudioSource.Play();
     }
 
-
     /* Player Collisions and Triggers*/
     void OnCollisionEnter2D(Collision2D other) {
         if (other.transform.tag == "MovingPlatform")
@@ -127,6 +132,10 @@ public class PlayerController : PhisicObject {
         {
             playerCollider.enabled = false;
             playerHurt = true;
+        }
+        if (other.CompareTag("Portal"))
+        {
+            canMove = false;
         }
     }
 
