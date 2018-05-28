@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FadeOutEffect : MonoBehaviour {
-
-	private float time = 10.0f;
 	
 	public GameObject objectToFade;
 	private SpriteRenderer spriteRenderer;

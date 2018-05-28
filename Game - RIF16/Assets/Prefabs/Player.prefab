@@ -255,7 +255,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,8 +281,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18865895}
-  m_Size: {x: 1.5363818, y: 2.3298259}
+  m_Offset: {x: 0, y: -0.39245057}
+  m_Size: {x: 0.82754207, y: 2.737409}
   m_Direction: 0
 --- !u!82 &82536922154975290
 AudioSource:

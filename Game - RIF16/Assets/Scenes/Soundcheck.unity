@@ -2285,26 +2285,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 82312905414626242, guid: 06040e0912c2bd54b9b0b665e3c46b94,
-        type: 2}
-      propertyPath: DopplerLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82312905414626242, guid: 06040e0912c2bd54b9b0b665e3c46b94,
-        type: 2}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82312905414626242, guid: 06040e0912c2bd54b9b0b665e3c46b94,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108321301121921980, guid: 06040e0912c2bd54b9b0b665e3c46b94,
-        type: 2}
-      propertyPath: m_Intensity
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06040e0912c2bd54b9b0b665e3c46b94, type: 2}
   m_IsPrefabParent: 0
