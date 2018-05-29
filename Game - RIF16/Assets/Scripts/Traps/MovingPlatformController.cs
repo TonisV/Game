@@ -13,6 +13,8 @@ public class MovingPlatformController : MonoBehaviour {
 	public Transform rayEnd;
 	private bool playerSpotted = false;
 	public bool moveWithPlayer = false;
+	public bool moveIfTriggered = false;
+	private bool trigger = false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,11 +23,24 @@ public class MovingPlatformController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		Raycasting();
+
+		if (playerSpotted)
+		{
+			trigger = true;
+		}
+		
 		if (playerSpotted && moveWithPlayer)
 		{
 			MovePlatform();
-		} else if(!moveWithPlayer) {
+		}
+		else if (trigger && moveIfTriggered)
+		{
+			MovePlatform();
+		} 
+		else if(!moveWithPlayer && !moveIfTriggered)
+		{
 			MovePlatform();
 		}
 	}
