@@ -6,7 +6,7 @@ public class FadeOutEffect : MonoBehaviour {
 	
 	public GameObject objectToFade;
 	private SpriteRenderer spriteRenderer;
-	private float fadeValue = 1f;
+	public float fadeValue = 1f;
 	private float currentTime = 0f;
 	public float timeItTakesToFade = 0.5f;
 	private bool isFading = false;
@@ -47,7 +47,7 @@ public class FadeOutEffect : MonoBehaviour {
 		{
 			if (other.CompareTag("Player"))
 			{
-				currentTime = 0;
+				//currentTime = 0;
 				isFading = true;
 			} 
 		}
@@ -59,7 +59,7 @@ public class FadeOutEffect : MonoBehaviour {
 		{
 			if (other.transform.tag == "Player")
 			{
-				currentTime = 0;
+				//currentTime = 0;
 				isFading = true;
 			}
 		}
