@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212650178398978784}
   - component: {fileID: 61425085375057454}
   - component: {fileID: 114176710600711080}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ice_3
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,9 +40,9 @@ GameObject:
   - component: {fileID: 212077469581840610}
   - component: {fileID: 61487695568508086}
   - component: {fileID: 114624982142628536}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ice_1
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,9 +58,9 @@ GameObject:
   - component: {fileID: 212005527068587916}
   - component: {fileID: 61676979344190878}
   - component: {fileID: 114083100558110526}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ice_4
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,9 +73,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4825185685471294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MeltingIcePlatform
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,9 +91,9 @@ GameObject:
   - component: {fileID: 212974664640128704}
   - component: {fileID: 61378405130588118}
   - component: {fileID: 114709727316963052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ice_2
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898039504166506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.52, y: -5.49, z: -0.09375}
+  m_LocalPosition: {x: 27.52, y: -5.49, z: -0.09375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4728298471071832}
@@ -279,7 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFade: {fileID: 0}
-  timeItTakesToFade: 0.5
+  fadeValue: 1
+  timeItTakesToFade: 0.7
   useCollider: 1
   fadeOutAndDestroy: 1
 --- !u!114 &114176710600711080
@@ -294,7 +295,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFade: {fileID: 0}
-  timeItTakesToFade: 0.5
+  fadeValue: 1
+  timeItTakesToFade: 0.7
   useCollider: 1
   fadeOutAndDestroy: 1
 --- !u!114 &114624982142628536
@@ -309,7 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFade: {fileID: 0}
-  timeItTakesToFade: 0.5
+  fadeValue: 1
+  timeItTakesToFade: 0.7
   useCollider: 1
   fadeOutAndDestroy: 1
 --- !u!114 &114709727316963052
@@ -324,7 +327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToFade: {fileID: 0}
-  timeItTakesToFade: 0.5
+  fadeValue: 1
+  timeItTakesToFade: 0.7
   useCollider: 1
   fadeOutAndDestroy: 1
 --- !u!212 &212005527068587916
