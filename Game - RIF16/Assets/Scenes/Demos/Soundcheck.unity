@@ -2337,6 +2337,11 @@ Prefab:
       propertyPath: m_TagString
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 114525191251675404, guid: 7a4681191a739424498d0592e1eb618b,
+        type: 2}
+      propertyPath: objectToFade
+      value: 
+      objectReference: {fileID: 1185669527}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a4681191a739424498d0592e1eb618b, type: 2}
   m_IsPrefabParent: 0
@@ -3788,6 +3793,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cf48d0cfb39b3041af0f95cac9d7b88, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1185669527 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1777673085130772, guid: 3faaa721fba55634c9f3f23bd12c0558,
+    type: 2}
+  m_PrefabInternal: {fileID: 1740643566}
 --- !u!1001 &1241229184
 Prefab:
   m_ObjectHideFlags: 0
