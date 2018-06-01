@@ -10,6 +10,7 @@ public class HUD : MonoBehaviour {
     private float targetFillAmount;
 
     public GameObject NextLevelUI;
+    public GameObject StartHelpUI;
 
 
     // Use this for initialization
@@ -28,12 +29,12 @@ public class HUD : MonoBehaviour {
             Time.timeScale = 0;
 
             PlayerPrefs.SetInt("LevelUp", 0);
+        } else if (!PlayerPrefs.HasKey("health") || PlayerPrefs.GetInt("health") == 5) {
+                StartHelpUI.SetActive(value: true);
+                Time.timeScale = 0;
         }
 
-        if (!PlayerPrefs.HasKey("health") || PlayerPrefs.GetInt("health") == 5) {
-            NextLevelUI.SetActive(value: true);
-            Time.timeScale = 0;
-        }
+        
     }
 
     // Update is called once per frame
@@ -51,6 +52,13 @@ public class HUD : MonoBehaviour {
             healthHearts.fillAmount -= 1.0f / waitTime * Time.deltaTime;
         } else {
             healthHearts.enabled = true;
+        }
+
+        if (StartHelpUI.activeInHierarchy) {
+            if (Input.anyKeyDown) {
+                StartHelpUI.SetActive(value: false);
+                NextLevelUI.SetActive(value: true);
+            }
         }
     }
 }
