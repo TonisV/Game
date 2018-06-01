@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour {
@@ -30,8 +31,13 @@ public class HUD : MonoBehaviour {
 
             PlayerPrefs.SetInt("LevelUp", 0);
         } else if (!PlayerPrefs.HasKey("health") || PlayerPrefs.GetInt("health") == 5) {
+            if (SceneManager.GetActiveScene().buildIndex == 1) {
                 StartHelpUI.SetActive(value: true);
                 Time.timeScale = 0;
+            } else {
+                NextLevelUI.SetActive(value: true);
+                Time.timeScale = 0;
+            }
         }
 
         

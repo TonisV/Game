@@ -17,6 +17,9 @@ public class PlayerController : PhisicObject {
     private DateTime lastRun;
     public bool playerHurt;
     public Transform spawningPoint;
+    public GameObject healthUIParticles;
+    //public Animation healthUIParticlesAnim;
+    private ParticleSystem healthUIParticleSys;
 
     [Header("Effects")]
     public AudioSource runAudioSource;
@@ -36,11 +39,17 @@ public class PlayerController : PhisicObject {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         playerCollider = GetComponent<CapsuleCollider2D>();
+        healthUIParticleSys = healthUIParticles.GetComponent<ParticleSystem>();
 
         if (PlayerPrefs.HasKey("health")) {
             curHealth = PlayerPrefs.GetInt("health");
             if (curHealth == 0) {
                 curHealth = maxHealth;
+            }
+
+            if (curHealth < 3) {
+                var main = healthUIParticleSys.main;
+                main.simulationSpeed = 1;
             }
         } else {
             curHealth = maxHealth;
