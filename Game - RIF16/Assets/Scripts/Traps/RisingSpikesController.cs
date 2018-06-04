@@ -24,7 +24,10 @@ public class RisingSpikesController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
     {	
-		playerSpotted = true;
+		if (other.CompareTag("Player"))
+        {
+            playerSpotted = true;
+        }
     }
 
 	public void RiseSpikes() {
