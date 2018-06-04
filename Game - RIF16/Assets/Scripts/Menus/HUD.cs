@@ -34,7 +34,6 @@ public class HUD : MonoBehaviour {
         } else if (!PlayerPrefs.HasKey("health") || PlayerPrefs.GetInt("health") == 5) {
             if (SceneManager.GetActiveScene().buildIndex == 1) {
                 StartComic.SetActive(value: true);
-                //StartHelpUI.SetActive(value: true);
                 Time.timeScale = 0;
             } else {
                 NextLevelUI.SetActive(value: true);
