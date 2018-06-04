@@ -155,6 +155,12 @@ public class PlayerController : PhisicObject {
         }
     }
 
+    public void TeleportAhead() {
+        if(SceneManager.GetActiveScene().buildIndex == 7) {
+            this.transform.position = new Vector2(123.76f, -9.02f);
+        }
+    }
+
     public void Die() {
         if (lastRun.AddSeconds(0.5) < DateTime.Now) {
 
