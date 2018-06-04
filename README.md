@@ -1,4 +1,4 @@
-# Game - Mysterious Mars Adventure
+# Mäng - Mysterious Mars Adventure
 Mutimeediumi praktika - HKI5068.HK
 
 Mängu tegevus toimub 2D platvormi stiilis kujundatud planeet Marss sisemuses kuhu kosmose avastajast peategelane on peale ebaõnnestunud maandumist tulnukate poolt lõksu püütud. Mängija ülesandeks on juhtida tegelane läbi Marsi sisemuses asuvate tasemete uuesti Marsi pinnale, et planeedilt eluga pääseda.
