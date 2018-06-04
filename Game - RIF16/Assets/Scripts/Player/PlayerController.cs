@@ -178,8 +178,4 @@ public class PlayerController : PhisicObject {
             }
         }
     }
-
-    void OnApplicationQuit() {
-        PlayerPrefs.DeleteKey("health");
-    }
 }

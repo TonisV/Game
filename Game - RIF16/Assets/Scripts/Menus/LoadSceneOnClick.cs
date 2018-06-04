@@ -23,7 +23,10 @@ public class LoadSceneOnClick : MonoBehaviour {
         if (!dontUpdateSavedScene) {
             PlayerPrefs.SetInt("sceneIndex", sceneIndex);
         }
-        PlayerPrefs.DeleteKey("health");
+        if (SceneManager.GetActiveScene().buildIndex == 0 && sceneIndex == 1) {
+            PlayerPrefs.DeleteKey("health");
+        }
+
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneIndex);
     }
