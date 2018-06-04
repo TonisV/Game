@@ -18,3 +18,6 @@ Mängu tegevus toimub 2D platvormi stiilis kujundatud planeet Marss sisemuses ku
  - [2D Extras](https://github.com/Unity-Technologies/2d-extras) - võimaldab kasutada kohandatud võimalusi tasemete joonistamisel 
  - [Cinemachine](https://assetstore.unity.com/packages/essentials/cinemachine-79898) - võimaldab reguleerida kaamera liikumist
  - [KinoBloom](https://github.com/keijiro/KinoBloom) - unity bloom efekti täiendus
+ 
+# Mängus kasutatud taustamuusika
+Pidades kinni CC litsentsi tingimustest kasutatakse mängus artist [Metre loomingut](https://drive.google.com/drive/folders/13-UU0JHOwZfDxI77p8NKlGeTiKKPreKe?usp=sharing)
