@@ -7,7 +7,7 @@ Mängu tegevus toimub 2D platvormi stiilis kujundatud planeet Marss sisemuses ku
 * **Mängumootor** - Unity 2017.3.1f1
 * **Platvorm** - Windows
 
-## Tiim
+# Tiim
 * **Frank Westholm**   - Graafika
 * **Margus Andrei**    - Graafika
 * **Margus Pokrovski** - Heli
