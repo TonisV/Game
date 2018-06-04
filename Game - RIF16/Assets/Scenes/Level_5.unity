@@ -2759,11 +2759,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4937194874151768, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.8892632
+      value: 1.1959429
       objectReference: {fileID: 0}
     - target: {fileID: 4937194874151768, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.00011539459
+      value: 0.004322052
       objectReference: {fileID: 0}
     - target: {fileID: 4937194874151768, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4411,6 +4411,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224811110072066370, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
     type: 2}
   m_PrefabInternal: {fileID: 1414655493}
+--- !u!1 &1414655495 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1770475610762640, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1414655493}
 --- !u!1001 &1455615351
 Prefab:
   m_ObjectHideFlags: 0
@@ -4758,6 +4763,11 @@ Prefab:
       propertyPath: spawningPoint
       value: 
       objectReference: {fileID: 1137058486}
+    - target: {fileID: 114016669222568120, guid: 3faaa721fba55634c9f3f23bd12c0558,
+        type: 2}
+      propertyPath: healthUIParticles
+      value: 
+      objectReference: {fileID: 1414655495}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3faaa721fba55634c9f3f23bd12c0558, type: 2}
   m_IsPrefabParent: 0
