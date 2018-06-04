@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour {
     public Transform canvas;
+    public GameObject NextLevelUI;
+    public GameObject StartHelpUI;
+    public GameObject StartComic;
 
     // Update is called once per frame
     void Update () {
@@ -13,7 +16,13 @@ public class PauseGame : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            Pause();
+            if (NextLevelUI == null || StartHelpUI == null || StartComic == null) {
+                Pause();
+            } else {
+                if (!NextLevelUI.activeInHierarchy && !StartHelpUI.activeInHierarchy && !StartComic.activeInHierarchy) {
+                    Pause();
+                }
+            }
         }
 }
 
@@ -45,6 +54,7 @@ public class PauseGame : MonoBehaviour {
     }
 
     public void Unpause() {
+        NextLevelUI.SetActive(value: false);
         Time.timeScale = 1;
     }
 }

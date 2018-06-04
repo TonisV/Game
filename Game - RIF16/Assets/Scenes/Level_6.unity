@@ -1808,6 +1808,11 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 278568953}
+    - target: {fileID: 114410257369597366, guid: a618297f9afae7b4ca0509a4d7d73580,
+        type: 2}
+      propertyPath: NextLevelUI
+      value: 
+      objectReference: {fileID: 1414655496}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a618297f9afae7b4ca0509a4d7d73580, type: 2}
   m_IsPrefabParent: 0
@@ -2402,11 +2407,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4937194874151768, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.1471262
+      value: 1.1959429
       objectReference: {fileID: 0}
     - target: {fileID: 4937194874151768, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.0063323975
+      value: 0.004322052
       objectReference: {fileID: 0}
     - target: {fileID: 4937194874151768, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2751,7 +2756,7 @@ Transform:
   - {fileID: 2067051141}
   - {fileID: 792048748}
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &592737295
 Prefab:
@@ -4381,6 +4386,11 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1733253667}
+    - target: {fileID: 114663069274221692, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+        type: 2}
+      propertyPath: NextLevelUI
+      value: 
+      objectReference: {fileID: 1414655496}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7eff07be7cfb874bb7c34d7b8f326d2, type: 2}
   m_IsPrefabParent: 0
@@ -4392,6 +4402,11 @@ RectTransform:
 --- !u!1 &1414655495 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1770475610762640, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1414655493}
+--- !u!1 &1414655496 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1770018195255052, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
     type: 2}
   m_PrefabInternal: {fileID: 1414655493}
 --- !u!1001 &1455615351

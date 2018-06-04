@@ -12,6 +12,7 @@ public class HUD : MonoBehaviour {
 
     public GameObject NextLevelUI;
     public GameObject StartHelpUI;
+    public GameObject StartComic;
 
 
     // Use this for initialization
@@ -32,7 +33,8 @@ public class HUD : MonoBehaviour {
             PlayerPrefs.SetInt("LevelUp", 0);
         } else if (!PlayerPrefs.HasKey("health") || PlayerPrefs.GetInt("health") == 5) {
             if (SceneManager.GetActiveScene().buildIndex == 1) {
-                StartHelpUI.SetActive(value: true);
+                StartComic.SetActive(value: true);
+                //StartHelpUI.SetActive(value: true);
                 Time.timeScale = 0;
             } else {
                 NextLevelUI.SetActive(value: true);
@@ -58,6 +60,14 @@ public class HUD : MonoBehaviour {
             healthHearts.fillAmount -= 1.0f / waitTime * Time.deltaTime;
         } else {
             healthHearts.enabled = true;
+        }
+
+
+        if (StartComic != null && StartComic.activeInHierarchy) {
+            if (Input.anyKeyDown) {
+                StartComic.SetActive(value: false);
+                StartHelpUI.SetActive(value: true);
+            }
         }
 
         if (StartHelpUI.activeInHierarchy && StartHelpUI.GetComponent<StartHelpAnimationController>().animationCompleted) {

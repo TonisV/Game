@@ -209,14 +209,6 @@ CompositeCollider2D:
         Y: -40000000
       - X: 30000000
         Y: -40000000
-    - - X: 230000000
-        Y: -20000000
-      - X: 210000000
-        Y: -20000000
-      - X: 210000000
-        Y: -40000000
-      - X: 230000000
-        Y: -40000000
     - - X: 110000000
         Y: -20000000
       - X: 70000000
@@ -224,6 +216,14 @@ CompositeCollider2D:
       - X: 70000000
         Y: -40000000
       - X: 110000000
+        Y: -40000000
+    - - X: 230000000
+        Y: -20000000
+      - X: 210000000
+        Y: -20000000
+      - X: 210000000
+        Y: -40000000
+      - X: 230000000
         Y: -40000000
     - - X: 330000000
         Y: -30000000
@@ -297,14 +297,14 @@ CompositeCollider2D:
       - {x: -4, y: -2}
       - {x: -4, y: -4}
       - {x: 3, y: -4}
-    - - {x: 23, y: -2}
-      - {x: 21, y: -2}
-      - {x: 21, y: -4}
-      - {x: 23, y: -4}
     - - {x: 11, y: -2}
       - {x: 7, y: -2}
       - {x: 7, y: -4}
       - {x: 11, y: -4}
+    - - {x: 23, y: -2}
+      - {x: 21, y: -2}
+      - {x: 21, y: -4}
+      - {x: 23, y: -4}
     - - {x: 33, y: -3}
       - {x: 31, y: -3}
       - {x: 31, y: -7}
@@ -1577,6 +1577,11 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 278568953}
+    - target: {fileID: 114410257369597366, guid: a618297f9afae7b4ca0509a4d7d73580,
+        type: 2}
+      propertyPath: NextLevelUI
+      value: 
+      objectReference: {fileID: 1218868373}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a618297f9afae7b4ca0509a4d7d73580, type: 2}
   m_IsPrefabParent: 0
@@ -3188,6 +3193,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f512c4f461b48a4aae14c84c202ffc4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1218868373 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1770018195255052, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1414655493}
 --- !u!1001 &1222627312
 Prefab:
   m_ObjectHideFlags: 0
@@ -3423,6 +3433,11 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1222627313}
+    - target: {fileID: 114663069274221692, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+        type: 2}
+      propertyPath: NextLevelUI
+      value: 
+      objectReference: {fileID: 1218868373}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7eff07be7cfb874bb7c34d7b8f326d2, type: 2}
   m_IsPrefabParent: 0
