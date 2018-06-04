@@ -60,7 +60,7 @@ public class HUD : MonoBehaviour {
             healthHearts.enabled = true;
         }
 
-        if (StartHelpUI.activeInHierarchy) {
+        if (StartHelpUI.activeInHierarchy && StartHelpUI.GetComponent<StartHelpAnimationController>().animationCompleted) {
             if (Input.anyKeyDown) {
                 StartHelpUI.SetActive(value: false);
                 NextLevelUI.SetActive(value: true);
