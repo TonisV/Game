@@ -664,6 +664,11 @@ Prefab:
       propertyPath: _intensity
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 20440537430197418, guid: 956c8a46ddd4f214cbf122390884a230,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
   m_IsPrefabParent: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour {
@@ -10,6 +11,8 @@ public class HUD : MonoBehaviour {
     private float targetFillAmount;
 
     public GameObject NextLevelUI;
+    public GameObject StartHelpUI;
+    public GameObject StartComic;
 
 
     // Use this for initialization
@@ -28,12 +31,17 @@ public class HUD : MonoBehaviour {
             Time.timeScale = 0;
 
             PlayerPrefs.SetInt("LevelUp", 0);
+        } else if (!PlayerPrefs.HasKey("health") || PlayerPrefs.GetInt("health") == 5) {
+            if (SceneManager.GetActiveScene().buildIndex == 1) {
+                StartComic.SetActive(value: true);
+                Time.timeScale = 0;
+            } else {
+                NextLevelUI.SetActive(value: true);
+                Time.timeScale = 0;
+            }
         }
 
-        if (!PlayerPrefs.HasKey("health") || PlayerPrefs.GetInt("health") == 5) {
-            NextLevelUI.SetActive(value: true);
-            Time.timeScale = 0;
-        }
+        
     }
 
     // Update is called once per frame
@@ -51,6 +59,21 @@ public class HUD : MonoBehaviour {
             healthHearts.fillAmount -= 1.0f / waitTime * Time.deltaTime;
         } else {
             healthHearts.enabled = true;
+        }
+
+
+        if (StartComic != null && StartComic.activeInHierarchy) {
+            if (Input.anyKeyDown) {
+                StartComic.SetActive(value: false);
+                StartHelpUI.SetActive(value: true);
+            }
+        }
+
+        if (StartHelpUI.activeInHierarchy && StartHelpUI.GetComponent<StartHelpAnimationController>().animationCompleted) {
+            if (Input.anyKeyDown) {
+                StartHelpUI.SetActive(value: false);
+                NextLevelUI.SetActive(value: true);
+            }
         }
     }
 }

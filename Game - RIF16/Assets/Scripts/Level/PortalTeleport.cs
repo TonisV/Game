@@ -7,6 +7,7 @@ public class PortalTeleport : MonoBehaviour {
 
     public int DestinationSceneIndex;
     public Light triggerLight;
+    public GameObject EndComic;
 
     private int activeSceneIndex;
     private bool portalTriggered;
@@ -16,10 +17,20 @@ public class PortalTeleport : MonoBehaviour {
             if (triggerLight.range < 15) {
                 triggerLight.range += 10 * Time.deltaTime;
             } else {
-                SceneManager.LoadScene(DestinationSceneIndex);
-                PlayerPrefs.SetInt("sceneIndex", DestinationSceneIndex);
-                PlayerPrefs.SetInt("LevelUp", 1);
-                PlayerPrefs.DeleteKey("health");
+                if (DestinationSceneIndex == 8) {
+                    EndComic.SetActive(value: true);
+                    if (Input.anyKeyDown) {
+                        SceneManager.LoadScene(DestinationSceneIndex);
+                        PlayerPrefs.SetInt("sceneIndex", DestinationSceneIndex);
+                        PlayerPrefs.SetInt("LevelUp", 1);
+                        PlayerPrefs.DeleteKey("health");
+                    }
+                } else {
+                    SceneManager.LoadScene(DestinationSceneIndex);
+                    PlayerPrefs.SetInt("sceneIndex", DestinationSceneIndex);
+                    PlayerPrefs.SetInt("LevelUp", 1);
+                    PlayerPrefs.DeleteKey("health");
+                }
             }
         }
     }

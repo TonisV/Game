@@ -574,7 +574,7 @@ Canvas:
   m_GameObject: {fileID: 411325899}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -594,7 +594,7 @@ RectTransform:
   m_GameObject: {fileID: 411325899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1659269681}
   - {fileID: 705528838}
@@ -604,8 +604,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &428871180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,6 +3567,11 @@ Prefab:
         type: 2}
       propertyPath: _intensity
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 20440537430197418, guid: 956c8a46ddd4f214cbf122390884a230,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
