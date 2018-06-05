@@ -1798,12 +1798,12 @@ Prefab:
     - target: {fileID: 61102785183526238, guid: 4cf48d0cfb39b3041af0f95cac9d7b88,
         type: 2}
       propertyPath: m_Offset.x
-      value: 0.85575664
+      value: 0.78977144
       objectReference: {fileID: 0}
     - target: {fileID: 61102785183526238, guid: 4cf48d0cfb39b3041af0f95cac9d7b88,
         type: 2}
       propertyPath: m_Size.x
-      value: 3.612553
+      value: 3.7445233
       objectReference: {fileID: 0}
     - target: {fileID: 1278836702934602, guid: 4cf48d0cfb39b3041af0f95cac9d7b88, type: 2}
       propertyPath: m_Name

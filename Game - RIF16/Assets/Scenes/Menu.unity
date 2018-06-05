@@ -575,7 +575,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 783252870}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1467,6 +1467,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 742933821}
+--- !u!1 &783252865 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1573561223095538, guid: 956c8a46ddd4f214cbf122390884a230,
+    type: 2}
+  m_PrefabInternal: {fileID: 2106329862}
+--- !u!114 &783252866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 783252865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6363bba448bf64e60a763433f9ddf81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _threshold: 0.8
+  _softKnee: 0.35
+  _radius: 3
+  _intensity: 0.25
+  _highQuality: 1
+  _antiFlicker: 1
+  _shader: {fileID: 4800000, guid: 5a711a01011934ebcb58ef5ad52159d6, type: 3}
+--- !u!20 &783252870 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20440537430197418, guid: 956c8a46ddd4f214cbf122390884a230,
+    type: 2}
+  m_PrefabInternal: {fileID: 2106329862}
 --- !u!1 &830555140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,7 +2485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3536,7 +3564,7 @@ Prefab:
     - target: {fileID: 20440537430197418, guid: 956c8a46ddd4f214cbf122390884a230,
         type: 2}
       propertyPath: m_OcclusionCulling
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 20440537430197418, guid: 956c8a46ddd4f214cbf122390884a230,
         type: 2}
@@ -3556,24 +3584,54 @@ Prefab:
     - target: {fileID: 114691301844503302, guid: 956c8a46ddd4f214cbf122390884a230,
         type: 2}
       propertyPath: _radius
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114691301844503302, guid: 956c8a46ddd4f214cbf122390884a230,
         type: 2}
       propertyPath: _softKnee
-      value: 0.35
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 114691301844503302, guid: 956c8a46ddd4f214cbf122390884a230,
         type: 2}
       propertyPath: _intensity
-      value: 0.25
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 20440537430197418, guid: 956c8a46ddd4f214cbf122390884a230,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114691301844503302, guid: 956c8a46ddd4f214cbf122390884a230,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20440537430197418, guid: 956c8a46ddd4f214cbf122390884a230,
+        type: 2}
+      propertyPath: m_AllowDynamicResolution
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646449971348164, guid: 956c8a46ddd4f214cbf122390884a230,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20440537430197418, guid: 956c8a46ddd4f214cbf122390884a230,
+        type: 2}
+      propertyPath: m_HDR
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20440537430197418, guid: 956c8a46ddd4f214cbf122390884a230,
+        type: 2}
+      propertyPath: m_AllowMSAA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573561223095538, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114691301844503302, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 956c8a46ddd4f214cbf122390884a230, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2114698126
