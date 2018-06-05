@@ -1419,6 +1419,18 @@ Prefab:
       propertyPath: StartHelpUI
       value: 
       objectReference: {fileID: 1414655496}
+    - target: {fileID: 114410257369597366, guid: a618297f9afae7b4ca0509a4d7d73580,
+        type: 2}
+      propertyPath: paused
+      value: 
+      objectReference: {fileID: 245078619633268962, guid: 7b884ea2f79ed544ca99cbed3c42be4d,
+        type: 2}
+    - target: {fileID: 114410257369597366, guid: a618297f9afae7b4ca0509a4d7d73580,
+        type: 2}
+      propertyPath: unpaused
+      value: 
+      objectReference: {fileID: 24500006, guid: 7b884ea2f79ed544ca99cbed3c42be4d,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a618297f9afae7b4ca0509a4d7d73580, type: 2}
   m_IsPrefabParent: 0

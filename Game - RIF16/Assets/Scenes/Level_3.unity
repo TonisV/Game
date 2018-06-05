@@ -1582,6 +1582,18 @@ Prefab:
       propertyPath: NextLevelUI
       value: 
       objectReference: {fileID: 1218868373}
+    - target: {fileID: 114410257369597366, guid: a618297f9afae7b4ca0509a4d7d73580,
+        type: 2}
+      propertyPath: paused
+      value: 
+      objectReference: {fileID: 245078619633268962, guid: 7b884ea2f79ed544ca99cbed3c42be4d,
+        type: 2}
+    - target: {fileID: 114410257369597366, guid: a618297f9afae7b4ca0509a4d7d73580,
+        type: 2}
+      propertyPath: unpaused
+      value: 
+      objectReference: {fileID: 24500006, guid: 7b884ea2f79ed544ca99cbed3c42be4d,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a618297f9afae7b4ca0509a4d7d73580, type: 2}
   m_IsPrefabParent: 0
@@ -3406,7 +3418,7 @@ Prefab:
     - target: {fileID: 224258902590565986, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -59.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224258902590565986, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
         type: 2}

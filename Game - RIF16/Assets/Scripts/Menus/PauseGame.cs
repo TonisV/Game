@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
 
 public class PauseGame : MonoBehaviour {
     public Transform canvas;
     public GameObject NextLevelUI;
     public GameObject StartHelpUI;
     public GameObject StartComic;
+
+    public AudioMixerSnapshot paused;
+    public AudioMixerSnapshot unpaused;
+    
 
     // Update is called once per frame
     void Update () {
@@ -24,7 +30,7 @@ public class PauseGame : MonoBehaviour {
                 }
             }
         }
-}
+    }
 
     public void Pause() {
         GameObject FirstChild = canvas.gameObject.transform.GetChild(0).gameObject;
@@ -46,6 +52,8 @@ public class PauseGame : MonoBehaviour {
                 Time.timeScale = 1;
             }
         }
+
+        PauseAudio();
     }
 
     public void Restart() {
@@ -56,5 +64,14 @@ public class PauseGame : MonoBehaviour {
     public void Unpause() {
         NextLevelUI.SetActive(value: false);
         Time.timeScale = 1;
+    }
+
+    public void PauseAudio() {
+        if (Time.timeScale == 0)
+        {
+            paused.TransitionTo(.01f);
+        } else {
+            unpaused.TransitionTo(.01f);
+        }
     }
 }
