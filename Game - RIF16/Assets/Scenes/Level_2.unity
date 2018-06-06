@@ -1548,6 +1548,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224359674805640906, guid: 48347ef09881e3d4384ec18fdc0d147c,
     type: 2}
   m_PrefabInternal: {fileID: 815051888}
+--- !u!114 &301849662 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114685644637814502, guid: f94ae0416c4262041b718353aa1da29c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2135860900}
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &330332115 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4812324785494614, guid: 3faaa721fba55634c9f3f23bd12c0558,
@@ -2531,6 +2537,21 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114645629643562570, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 301849662}
+    - target: {fileID: 114784839017074228, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 301849662}
+    - target: {fileID: 114180883459255954, guid: 48347ef09881e3d4384ec18fdc0d147c,
+        type: 2}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 301849662}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48347ef09881e3d4384ec18fdc0d147c, type: 2}
   m_IsPrefabParent: 0
@@ -3359,7 +3380,13 @@ Prefab:
       propertyPath: StartHelpUI
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114960576853528798, guid: b7eff07be7cfb874bb7c34d7b8f326d2,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114960576853528798, guid: b7eff07be7cfb874bb7c34d7b8f326d2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b7eff07be7cfb874bb7c34d7b8f326d2, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1414655494 stripped
