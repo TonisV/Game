@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
-
+   
 
 public class PauseGame : MonoBehaviour {
     public Transform canvas;
@@ -13,8 +13,8 @@ public class PauseGame : MonoBehaviour {
 
     public AudioMixerSnapshot paused;
     public AudioMixerSnapshot unpaused;
-    
 
+      
     // Update is called once per frame
     void Update () {
         if (canvas == null) {
@@ -40,6 +40,7 @@ public class PauseGame : MonoBehaviour {
         if (canvas.gameObject.activeInHierarchy == false) {
             canvas.gameObject.SetActive(true);
             Time.timeScale = 0;
+            PauseAudio();
         } else {
             if (SecondChild.activeInHierarchy == true) {
                 SecondChild.SetActive(false);
@@ -50,10 +51,9 @@ public class PauseGame : MonoBehaviour {
             } else {
                 canvas.gameObject.SetActive(false);
                 Time.timeScale = 1;
+                UnpauseAudio();
             }
         }
-
-        PauseAudio();
     }
 
     public void Restart() {
@@ -67,11 +67,10 @@ public class PauseGame : MonoBehaviour {
     }
 
     public void PauseAudio() {
-        if (Time.timeScale == 0)
-        {
-            paused.TransitionTo(.01f);
-        } else {
-            unpaused.TransitionTo(.01f);
-        }
+        paused.TransitionTo(.01f);
+    }
+    
+    public void UnpauseAudio() {
+        unpaused.TransitionTo(.01f);
     }
 }
