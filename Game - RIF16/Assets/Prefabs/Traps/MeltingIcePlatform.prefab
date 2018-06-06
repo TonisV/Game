@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212650178398978784}
   - component: {fileID: 61425085375057454}
   - component: {fileID: 114176710600711080}
+  - component: {fileID: 61930829393991766}
   m_Layer: 10
   m_Name: ice_3
   m_TagString: Floor
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 212077469581840610}
   - component: {fileID: 61487695568508086}
   - component: {fileID: 114624982142628536}
+  - component: {fileID: 61509712724937828}
   m_Layer: 10
   m_Name: ice_1
   m_TagString: Floor
@@ -58,6 +60,7 @@ GameObject:
   - component: {fileID: 212005527068587916}
   - component: {fileID: 61676979344190878}
   - component: {fileID: 114083100558110526}
+  - component: {fileID: 61765299082094102}
   m_Layer: 10
   m_Name: ice_4
   m_TagString: Floor
@@ -91,6 +94,7 @@ GameObject:
   - component: {fileID: 212974664640128704}
   - component: {fileID: 61378405130588118}
   - component: {fileID: 114709727316963052}
+  - component: {fileID: 61168043251062316}
   m_Layer: 10
   m_Name: ice_2
   m_TagString: Floor
@@ -167,6 +171,31 @@ Transform:
   m_Father: {fileID: 4825185685471294}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61168043251062316
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1978666113998362}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1}
+  m_EdgeRadius: 0
 --- !u!61 &61378405130588118
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -242,6 +271,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!61 &61509712724937828
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741664417096080}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1}
+  m_EdgeRadius: 0
 --- !u!61 &61676979344190878
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -267,6 +321,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!61 &61765299082094102
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1848711912452472}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1}
+  m_EdgeRadius: 0
+--- !u!61 &61930829393991766
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436366805850348}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1}
+  m_EdgeRadius: 0
 --- !u!114 &114083100558110526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,7 +385,7 @@ MonoBehaviour:
   objectToFade: {fileID: 0}
   fadeValue: 1
   timeItTakesToFade: 0.7
-  useCollider: 1
+  useCollider: 0
   fadeOutAndDestroy: 1
 --- !u!114 &114176710600711080
 MonoBehaviour:
@@ -297,7 +401,7 @@ MonoBehaviour:
   objectToFade: {fileID: 0}
   fadeValue: 1
   timeItTakesToFade: 0.7
-  useCollider: 1
+  useCollider: 0
   fadeOutAndDestroy: 1
 --- !u!114 &114624982142628536
 MonoBehaviour:
@@ -313,7 +417,7 @@ MonoBehaviour:
   objectToFade: {fileID: 0}
   fadeValue: 1
   timeItTakesToFade: 0.7
-  useCollider: 1
+  useCollider: 0
   fadeOutAndDestroy: 1
 --- !u!114 &114709727316963052
 MonoBehaviour:
@@ -329,7 +433,7 @@ MonoBehaviour:
   objectToFade: {fileID: 0}
   fadeValue: 1
   timeItTakesToFade: 0.7
-  useCollider: 1
+  useCollider: 0
   fadeOutAndDestroy: 1
 --- !u!212 &212005527068587916
 SpriteRenderer:
