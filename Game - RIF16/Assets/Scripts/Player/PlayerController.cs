@@ -73,6 +73,7 @@ public class PlayerController : PhisicObject {
         {
             velocity.y = jumpTakeOffSpeed;
             jump = true;
+            playJumpSound();
         }
         else if (Input.GetButtonUp("Jump") && canMove)
         {
@@ -106,6 +107,7 @@ public class PlayerController : PhisicObject {
     {
         if (jump)
         {
+            jumpAudioSource.Stop();
             jumpAudioSource.Play();
         }
     }
