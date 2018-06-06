@@ -21,8 +21,8 @@ public class PortalTeleport : MonoBehaviour {
                     EndComic.SetActive(value: true);
                     if (Input.anyKeyDown) {
                         SceneManager.LoadScene(DestinationSceneIndex);
-                        PlayerPrefs.SetInt("sceneIndex", DestinationSceneIndex);
-                        PlayerPrefs.SetInt("LevelUp", 1);
+                        PlayerPrefs.DeleteKey("sceneIndex");
+                        PlayerPrefs.DeleteKey("LevelUp");
                         PlayerPrefs.DeleteKey("health");
                     }
                 } else {
