@@ -1100,13 +1100,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 224701490202418120}
   m_HandleRect: {fileID: 224507741925588360}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
+  m_MinValue: -80
+  m_MaxValue: 0
+  m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetSfxLvl
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114089732293599726
@@ -1248,8 +1259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 0}
   selectedObject: {fileID: 1646535609859272}
-  mainPanel: {fileID: 0}
-  panel: {fileID: 0}
+  mainPanel: {fileID: 1748969807503928}
+  panel: {fileID: 1587356525663270}
 --- !u!114 &114181771032198182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1289,13 +1300,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 224644955453797282}
   m_HandleRect: {fileID: 224040417151790728}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
+  m_MinValue: -80
+  m_MaxValue: 0
+  m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetMasterLvl
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114198204153846788
@@ -1340,6 +1362,17 @@ MonoBehaviour:
       - m_Target: {fileID: 114959274267189056}
         m_MethodName: LoadByIndex
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: UnpauseAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2018,6 +2051,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 224359674805640906}
+  NextLevelUI: {fileID: 0}
+  StartHelpUI: {fileID: 0}
+  StartComic: {fileID: 0}
+  paused: {fileID: 245078619633268962, guid: 7b884ea2f79ed544ca99cbed3c42be4d, type: 2}
+  unpaused: {fileID: 24500006, guid: 7b884ea2f79ed544ca99cbed3c42be4d, type: 2}
 --- !u!114 &114593270147039778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2161,6 +2199,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114567443982349108}
         m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114567443982349108}
+        m_MethodName: UnpauseAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2405,6 +2454,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 224359674805640906}
+  NextLevelUI: {fileID: 0}
+  StartHelpUI: {fileID: 0}
+  StartComic: {fileID: 0}
+  paused: {fileID: 245078619633268962, guid: 7b884ea2f79ed544ca99cbed3c42be4d, type: 2}
+  unpaused: {fileID: 24500006, guid: 7b884ea2f79ed544ca99cbed3c42be4d, type: 2}
 --- !u!114 &114779238516294370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2451,8 +2505,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 0}
   selectedObject: {fileID: 1505670837280690}
-  mainPanel: {fileID: 0}
-  panel: {fileID: 0}
+  mainPanel: {fileID: 1748969807503928}
+  panel: {fileID: 1073354844820924}
 --- !u!114 &114821367649230098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2492,13 +2546,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 224954503177896808}
   m_HandleRect: {fileID: 224742966130894258}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 1
+  m_MinValue: -80
+  m_MaxValue: 0
+  m_WholeNumbers: 1
+  m_Value: -30
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetMusicLvl
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114841403372964868
@@ -2569,6 +2634,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114760278063892232}
         m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114760278063892232}
+        m_MethodName: UnpauseAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3201,7 +3277,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1991267960620856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
@@ -3552,7 +3628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -539.8753}
+  m_AnchoredPosition: {x: 960, y: -540}
   m_SizeDelta: {x: 500, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224701490202418120
