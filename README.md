@@ -20,4 +20,4 @@ Mängu tegevus toimub 2D platvormi stiilis kujundatud planeet Marss sisemuses ku
  - [KinoBloom](https://github.com/keijiro/KinoBloom) - unity bloom efekti täiendus
  
 # Mängus kasutatud taustamuusika
-Pidades kinni CC litsentsi tingimustest kasutatakse mängus artist [Metre loomingut](https://drive.google.com/drive/folders/13-UU0JHOwZfDxI77p8NKlGeTiKKPreKe?usp=sharing)
+Pidades kinni [CC litsentsi tingimustest](https://creativecommons.org/licenses/by-nc-sa/4.0/) kasutatakse mängus artist [Metre loomingut](https://drive.google.com/drive/folders/13-UU0JHOwZfDxI77p8NKlGeTiKKPreKe?usp=sharing)
